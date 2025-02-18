@@ -1,7 +1,7 @@
 import { BentoGrid, BentoItem } from "./bento-grid"
 import Image from "next/image"
 import { Dumbbell, Zap, Shield, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/app/components/button"
 
 export function InfoSection() {
   return (

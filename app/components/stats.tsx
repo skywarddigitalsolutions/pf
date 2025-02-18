@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Dumbbell, Zap, Shield } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/app/components/button"
 import { ArrowDown } from "lucide-react"
 
 const highlights = [

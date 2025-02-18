@@ -1,7 +1,7 @@
 import { Navbar } from "@/app/components/navbar"
 import { Footer } from "@/app/components/footer"
 import { BentoGrid, BentoItem } from "@/app/components/bento-grid"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/app/components/button"
 import Image from "next/image"
 
 const products = [
