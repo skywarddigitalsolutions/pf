@@ -42,7 +42,7 @@ export function InfoSection() {
             <div className="flex items-start mb-4">
               <Star className="text-rojoprincipal mr-2 shrink-0" />
               <p className="italic">
-                "Los suplementos de protfit han transformado mi rutina de entrenamiento. ¡Increíbles resultados!"
+               { "Los suplementos de protfit han transformado mi rutina de entrenamiento. ¡Increíbles resultados!"}
               </p>
             </div>
             <p className="text-right">- María G., atleta amateur</p>

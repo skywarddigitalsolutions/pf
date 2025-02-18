@@ -5,8 +5,6 @@ import { Hero } from "./components/hero"
 import { Stats } from "./components/stats"
 import { InfoSection } from "./components/info"
 import { Footer } from "./components/footer"
-import { Button } from "@/app/components/button"
-import { ArrowDown } from "lucide-react"
 import { ProductosDestacados } from "./components/productos-destacados"
 
 export default function Home() {
