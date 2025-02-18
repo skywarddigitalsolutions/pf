@@ -7,7 +7,7 @@ export function InfoSection() {
   return (
     <section className="py-20 px-4 bg-negro">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-rojoprincipal">Descubre SupleDeportes</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-rojoprincipal">Descubre Suplementos</h2>
         <BentoGrid>
           <BentoItem gradient="primary" className="md:col-span-2">
             <h3 className="text-xl font-bold mb-2">Proteína Whey</h3>

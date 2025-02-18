@@ -1,6 +1,6 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { BentoGrid, BentoItem } from "@/components/bento-grid"
+import { Navbar } from "@/app/components/navbar"
+import { Footer } from "@/app/components/footer"
+import { BentoGrid, BentoItem } from "@/app/components/bento-grid"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 

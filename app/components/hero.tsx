@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export function Hero() {
   const [text, setText] = useState("")
@@ -12,13 +13,23 @@ export function Hero() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setText(fullText.slice(0, text.length + 1))
-    }, 100)
+    }, 10)
 
     return () => clearTimeout(timeout)
   }, [text])
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+<div className="absolute inset-0 z-0 bg-negro opacity-5">
+        <Image
+          src="/fondo.webp" // Asegúrate de que la imagen esté en la carpeta 'public' de tu proyecto
+          alt="Fondo"
+          layout="fill"
+          objectFit="cover"
+          quality={100} // Ajusta la calidad si es necesario
+        />
+      </div>
       {/* Animated background shapes */}
       <motion.div
         className="absolute inset-0 z-0"
@@ -50,7 +61,7 @@ export function Hero() {
           />
         ))}
       </motion.div>
-
+          
       {/* Content */}
       <div className="relative z-10 text-center px-4">
         <motion.h1
@@ -80,7 +91,7 @@ export function Hero() {
           </Button>
         </motion.div>
       </div>
-    </div>
+  </div>
   )
 }
 
