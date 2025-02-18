@@ -42,7 +42,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mt-8 text-center text-sm">
-        <p>&copy; 2025 protfit. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Protfit. Todos los derechos reservados.</p>
       </div>
     </footer>
   )
