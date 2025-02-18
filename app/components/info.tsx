@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function InfoSection() {
   return (
-    <section className="py-20 px-4 bg-negro">
+    <section className="py-20 px-4 bg-grisoscuro">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-rojoprincipal">Descubre Suplementos</h2>
         <BentoGrid>
@@ -42,13 +42,13 @@ export function InfoSection() {
             <div className="flex items-start mb-4">
               <Star className="text-rojoprincipal mr-2 shrink-0" />
               <p className="italic">
-                "Los suplementos de SupleDeportes han transformado mi rutina de entrenamiento. ¡Increíbles resultados!"
+                "Los suplementos de protfit han transformado mi rutina de entrenamiento. ¡Increíbles resultados!"
               </p>
             </div>
             <p className="text-right">- María G., atleta amateur</p>
           </BentoItem>
           <BentoItem gradient="primary" className="md:col-span-2">
-            <h2 className="text-2xl font-bold mb-4">Sobre SupleDeportes</h2>
+            <h2 className="text-2xl font-bold mb-4">Sobre protfit</h2>
             <p className="mb-4">
               Somos apasionados por ayudarte a alcanzar tus metas fitness con los mejores suplementos del mercado.
             </p>

@@ -28,7 +28,7 @@ export function Stats() {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-rojoprincipal">
-          Nuestros Productos Destacados
+          Nuestros Logros
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {highlights.map((item, index) => (
@@ -60,7 +60,6 @@ export function Stats() {
             </Button>
           </div>
       </div>
-      
     </section>
     
   )

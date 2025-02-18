@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="bg-grisoscuro text-blanco p-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4 text-rojoprincipal">SupleDeportes</h3>
+          <h3 className="text-xl font-bold mb-4 text-rojoprincipal">Protfit</h3>
           <p>Tu tienda de confianza para suplementos deportivos de alta calidad.</p>
         </div>
         <div>
@@ -38,11 +38,11 @@ export function Footer() {
           <p>Calle Ejemplo, 123</p>
           <p>Ciudad, País</p>
           <p>Teléfono: (123) 456-7890</p>
-          <p>Email: info@supledeportes.com</p>
+          <p>Email: info@protfit.com</p>
         </div>
       </div>
       <div className="mt-8 text-center text-sm">
-        <p>&copy; 2025 SupleDeportes. Todos los derechos reservados.</p>
+        <p>&copy; 2025 protfit. Todos los derechos reservados.</p>
       </div>
     </footer>
   )

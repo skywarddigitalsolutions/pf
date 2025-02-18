@@ -7,6 +7,7 @@ import { InfoSection } from "./components/info"
 import { Footer } from "./components/footer"
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
+import { ProductosDestacados } from "./components/productos-destacados"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <InfoSection />
+      <ProductosDestacados />
       <Footer />
     </div>
   )
