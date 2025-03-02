@@ -11,82 +11,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { products } from "@/app/data/products" // Importamos la lista de productos
 
-/*
-const products = [
-  {
-    detail: "proteina-whey",
-    name: "Proteína Whey",
-    description: "Proteína de suero de leche de alta calidad para recuperación muscular.",
-    imageUrl: "/placeholder.svg?height=200&width=200",
-    category: "Proteínas",
-    objective: ["Masa muscular", "Recuperación"],
-    price: 29.99,
-  },
-  {
-    detail: "creatina-monohidrato",
-    name: "Creatina Monohidrato",
-    description: "Suplemento para mejorar el rendimiento y la fuerza muscular.",
-    imageUrl: "/placeholder.svg?height=200&width=200",
-    category: "Rendimiento",
-    objective: ["Fuerza", "Rendimiento"],
-    price: 19.99,
-  },
-  {
-    detail: "bcaa-en-polvo",
-    name: "BCAA en polvo",
-    description: "Aminoácidos de cadena ramificada para favorecer la recuperación.",
-    imageUrl: "/placeholder.svg?height=200&width=200",
-    category: "Aminoácidos",
-    objective: ["Recuperación", "Resistencia"],
-    price: 24.99,
-  },
-  {
-    detail: "pre-entreno",
-    name: "Pre-entreno",
-    description: "Fórmula energética para maximizar tu rendimiento durante el entrenamiento.",
-    imageUrl: "/placeholder.svg?height=200&width=200",
-    category: "Energía",
-    objective: ["Rendimiento", "Energía"],
-    price: 34.99,
-  },
-  {
-    detail: "multivitaminico",
-    name: "Multivitamínico",
-    description: "Complejo de vitaminas y minerales para una salud óptima.",
-    imageUrl: "/placeholder.svg?height=200&width=200",
-    category: "Salud",
-    objective: ["Salud general"],
-    price: 14.99,
-  },
-  {
-    detail: "omega-3",
-    name: "Omega-3",
-    description: "Ácidos grasos esenciales para la salud cardiovascular y cerebral.",
-    imageUrl: "/placeholder.svg?height=200&width=200",
-    category: "Salud",
-    objective: ["Salud general", "Recuperación"],
-    price: 22.99,
-  },
-  {
-    detail: "combo-masa-muscular",
-    name: "Combo Masa Muscular",
-    description: "Pack completo para ganar masa muscular: Proteína Whey + Creatina + BCAA",
-    imageUrl: "/placeholder.svg?height=200&width=200",
-    category: "Combos",
-    objective: ["Masa muscular"],
-    price: 69.99,
-  },
-  {
-    detail: "combo-definicion",
-    name: "Combo Definición",
-    description: "Pack para definición muscular: Proteína Isolate + Quemador de grasa + L-Carnitina",
-    imageUrl: "/placeholder.svg?height=200&width=200",
-    category: "Combos",
-    objective: ["Definición"],
-    price: 79.99,
-  },
-]
-*/
+
 const objectives = ["Todos", "Masa muscular", "Definición", "Recuperación", "Rendimiento", "Energía", "Salud general"]
 const categories = ["Todos", "Proteínas", "Rendimiento", "Aminoácidos", "Energía", "Salud", "Combos"]
 
@@ -127,16 +52,7 @@ export default function Productos() {
           <h1 className="text-4xl font-bold mb-8 text-center text-rojoprincipal">Nuestros Productos</h1>
 
           <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Input
-              type="text"
-              placeholder="Buscar productos..."
-              value={searchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value)
-                filterProducts()
-              }}
-              className="bg-negro/50 text-blanco border-rojoprincipal/50 focus:border-rojoprincipal"
-            />
+           
             <Select
               onValueChange={(value) => {
                 setSelectedObjective(value)
@@ -171,6 +87,16 @@ export default function Productos() {
                 ))}
               </SelectContent>
             </Select>
+             <Input
+              type="text"
+              placeholder="Buscar productos..."
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value)
+                filterProducts()
+              }}
+              className="bg-negro/50 text-blanco border-rojoprincipal/50 focus:border-rojoprincipal"
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
