@@ -9,10 +9,12 @@ import { Input } from "@/app/components/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/app/components/select"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { products } from "@/app/data/products" // Importamos la lista de productos
 
+/*
 const products = [
   {
-    slug: "proteina-whey",
+    detail: "proteina-whey",
     name: "Proteína Whey",
     description: "Proteína de suero de leche de alta calidad para recuperación muscular.",
     imageUrl: "/placeholder.svg?height=200&width=200",
@@ -21,7 +23,7 @@ const products = [
     price: 29.99,
   },
   {
-    slug: "creatina-monohidrato",
+    detail: "creatina-monohidrato",
     name: "Creatina Monohidrato",
     description: "Suplemento para mejorar el rendimiento y la fuerza muscular.",
     imageUrl: "/placeholder.svg?height=200&width=200",
@@ -30,7 +32,7 @@ const products = [
     price: 19.99,
   },
   {
-    slug: "bcaa-en-polvo",
+    detail: "bcaa-en-polvo",
     name: "BCAA en polvo",
     description: "Aminoácidos de cadena ramificada para favorecer la recuperación.",
     imageUrl: "/placeholder.svg?height=200&width=200",
@@ -39,7 +41,7 @@ const products = [
     price: 24.99,
   },
   {
-    slug: "pre-entreno",
+    detail: "pre-entreno",
     name: "Pre-entreno",
     description: "Fórmula energética para maximizar tu rendimiento durante el entrenamiento.",
     imageUrl: "/placeholder.svg?height=200&width=200",
@@ -48,7 +50,7 @@ const products = [
     price: 34.99,
   },
   {
-    slug: "multivitaminico",
+    detail: "multivitaminico",
     name: "Multivitamínico",
     description: "Complejo de vitaminas y minerales para una salud óptima.",
     imageUrl: "/placeholder.svg?height=200&width=200",
@@ -57,7 +59,7 @@ const products = [
     price: 14.99,
   },
   {
-    slug: "omega-3",
+    detail: "omega-3",
     name: "Omega-3",
     description: "Ácidos grasos esenciales para la salud cardiovascular y cerebral.",
     imageUrl: "/placeholder.svg?height=200&width=200",
@@ -66,7 +68,7 @@ const products = [
     price: 22.99,
   },
   {
-    slug: "combo-masa-muscular",
+    detail: "combo-masa-muscular",
     name: "Combo Masa Muscular",
     description: "Pack completo para ganar masa muscular: Proteína Whey + Creatina + BCAA",
     imageUrl: "/placeholder.svg?height=200&width=200",
@@ -75,7 +77,7 @@ const products = [
     price: 69.99,
   },
   {
-    slug: "combo-definicion",
+    detail: "combo-definicion",
     name: "Combo Definición",
     description: "Pack para definición muscular: Proteína Isolate + Quemador de grasa + L-Carnitina",
     imageUrl: "/placeholder.svg?height=200&width=200",
@@ -84,7 +86,7 @@ const products = [
     price: 79.99,
   },
 ]
-
+*/
 const objectives = ["Todos", "Masa muscular", "Definición", "Recuperación", "Rendimiento", "Energía", "Salud general"]
 const categories = ["Todos", "Proteínas", "Rendimiento", "Aminoácidos", "Energía", "Salud", "Combos"]
 
@@ -174,7 +176,7 @@ export default function Productos() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product, index) => (
               <motion.div
-                key={product.slug}
+                key={product.detail}
                 className="bg-negro/50 backdrop-blur-md rounded-xl overflow-hidden shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -205,7 +207,7 @@ export default function Productos() {
                   </div>
                   <Button
                     className="w-full bg-rojoprincipal hover:bg-rojosecundario text-blanco transition-colors duration-300"
-                    onClick={() => router.push(`/productos/${product.slug}`)}
+                    onClick={() => router.push(`/productos/${product.detail}`)}
                   >
                     Ver detalles
                   </Button>

@@ -12,7 +12,7 @@ import { motion } from "framer-motion"
 // Simulamos una base de datos de productos
 const products = [
   {
-    slug: "proteina-whey",
+    detail: "proteina-whey",
     name: "Proteína Whey",
     description:
       "Proteína de suero de leche de alta calidad para recuperación muscular. Ideal para después del entrenamiento, ayuda a la síntesis de proteínas musculares y favorece la recuperación.",
@@ -30,18 +30,18 @@ const products = [
   // ... Aquí irían el resto de los productos
 ]
 
-export default function ProductDetail({ params }: { params: { slug: string } }) {
+export default function ProductDetail({ params }: { params: { detail: string } }) {
   const [product, setProduct] = useState<any>(null)
   const router = useRouter()
 
   useEffect(() => {
-    const foundProduct = products.find((p) => p.slug === params.slug)
+    const foundProduct = products.find((p) => p.detail === params.detail)
     if (foundProduct) {
       setProduct(foundProduct)
     } else {
       router.push("/productos")
     }
-  }, [params.slug, router])
+  }, [params.detail, router])
 
   if (!product) {
     return <div>Cargando...</div>
