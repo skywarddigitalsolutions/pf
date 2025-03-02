@@ -8,19 +8,21 @@ const products = [
   {
     name: "Proteína Whey",
     description: "Recuperación muscular de primera",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/proteina.jpg",
   },
   {
     name: "Pre-entreno",
     description: "Energía explosiva para tus sesiones",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/prewar.png",
   },
   {
     name: "BCAA",
-    description: "Aminoácidos esenciales para tu recuperación",
-    image: "/placeholder.svg?height=300&width=300",
+    description: "fdfd",
+    image: "/creatina.webp",
   },
-  { name: "Creatina", description: "Potencia tu fuerza y rendimiento", image: "/placeholder.svg?height=300&width=300" },
+  { name: "Creatina", 
+    description: "Potencia tu fuerza y rendimiento", 
+    image: "/proteina2.webp" },
 ]
 
 export function ProductosDestacados() {
@@ -45,7 +47,7 @@ export function ProductosDestacados() {
                     alt={product.name}
                     width={300}
                     height={300}
-                    className="object-cover w-full h-48 transform group-hover:scale-110 transition-transform duration-300"
+                    className="object-cover w-full h-72 transform group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-blanco">{product.name}</h3>
