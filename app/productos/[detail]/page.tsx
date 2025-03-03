@@ -8,20 +8,22 @@ import { Footer } from "@/app/components/footer"
 import { Button } from "@/app/components/button"
 import { ArrowLeft, ShoppingCart } from "lucide-react"
 import { motion } from "framer-motion"
-import {products} from "@/app/data/products"
-import {Product} from "@/app/data/products"
-export default function ProductDetail({ params }: { params: { detail: string } }) {
-const [product, setProduct] = useState<Product | null>(null)
+import { products, Product } from "@/app/data/products"
+import { useParams } from "next/navigation" // <-- ✅ Importa useParams
+
+export default function ProductDetail() {
+  const { detail } = useParams() as { detail: string } // ✅ Obtener `detail` de los parámetros de Next.js
+  const [product, setProduct] = useState<Product | null>(null)
   const router = useRouter()
 
   useEffect(() => {
-    const foundProduct = products.find((p) => p.detail === params.detail)
+    const foundProduct = products.find((p) => p.detail === detail)
     if (foundProduct) {
       setProduct(foundProduct)
     } else {
       router.push("/productos")
     }
-  }, [params.detail, router])
+  }, [detail, router])
 
   if (!product) {
     return <div>Cargando...</div>
@@ -105,4 +107,3 @@ const [product, setProduct] = useState<Product | null>(null)
     </div>
   )
 }
-
