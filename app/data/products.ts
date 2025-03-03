@@ -1,4 +1,13 @@
-// app/data/products.ts
+export interface Product {
+  detail: string
+  name: string
+  description: string
+  imageUrl: string
+  category: string
+  objective: string[]
+  price: number
+  details: string[]
+}
 
 export const products = [
   // 🔹 PROTEÍNAS

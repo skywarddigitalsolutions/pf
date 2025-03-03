@@ -1,5 +1,4 @@
 import { BentoGrid, BentoItem } from "./bento-grid"
-import Image from "next/image"
 import { Dumbbell, Bolt, Shield, Star, MessageCircle, Lightbulb, BookOpen } from "lucide-react"
 import { Button } from "@/app/components/button"
 import { motion } from "framer-motion"

@@ -9,9 +9,9 @@ import { Button } from "@/app/components/button"
 import { ArrowLeft, ShoppingCart } from "lucide-react"
 import { motion } from "framer-motion"
 import {products} from "@/app/data/products"
-
+import {Product} from "@/app/data/products"
 export default function ProductDetail({ params }: { params: { detail: string } }) {
-  const [product, setProduct] = useState<any>(null)
+const [product, setProduct] = useState<Product | null>(null)
   const router = useRouter()
 
   useEffect(() => {

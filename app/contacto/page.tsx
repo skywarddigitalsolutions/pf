@@ -55,7 +55,7 @@ export default function ContactoPage() {
         asunto: "",
         mensaje: "",
       })
-    } catch (error) {
+    } catch {
       setSubmitSuccess(false)
       setErrorMessage("Hubo un error al enviar el formulario. Por favor intenta nuevamente.")
     } finally {

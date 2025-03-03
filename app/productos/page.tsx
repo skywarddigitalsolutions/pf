@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Navbar } from "@/app/components/navbar"
 import { Footer } from "@/app/components/footer"
@@ -34,28 +34,31 @@ export default function Productos() {
   useEffect(() => {
     filterProducts()
   }, [searchTerm, selectedObjective, selectedCategory])
+const filterProducts = useCallback(() => {
+  let filtered = products
 
-  const filterProducts = () => {
-    let filtered = products
-
-    if (searchTerm) {
-      filtered = filtered.filter(
-        (product) =>
-          product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          product.description.toLowerCase().includes(searchTerm.toLowerCase()),
-      )
-    }
-
-    if (selectedObjective !== "Todos") {
-      filtered = filtered.filter((product) => product.objective.includes(selectedObjective))
-    }
-
-    if (selectedCategory !== "Todos") {
-      filtered = filtered.filter((product) => product.category === selectedCategory)
-    }
-
-    setFilteredProducts(filtered)
+  if (searchTerm) {
+    filtered = filtered.filter(
+      (product) =>
+        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchTerm.toLowerCase()),
+    )
   }
+
+  if (selectedObjective !== "Todos") {
+    filtered = filtered.filter((product) => product.objective.includes(selectedObjective))
+  }
+
+  if (selectedCategory !== "Todos") {
+    filtered = filtered.filter((product) => product.category === selectedCategory)
+  }
+
+  setFilteredProducts(filtered)
+}, [searchTerm, selectedObjective, selectedCategory]) 
+
+useEffect(() => {
+  filterProducts()
+}, [filterProducts])
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-grisoscuro to-negro text-blanco">

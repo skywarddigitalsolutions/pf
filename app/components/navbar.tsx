@@ -30,13 +30,10 @@ export function Navbar() {
   const [hoverItem, setHoverItem] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null)
-  const router = useRouter()
 
   // Cerrar el menú móvil al cambiar de ruta
   useEffect(() => {
-    const handleRouteChange = () => {
-      setIsMobileMenuOpen(false)
-    }
+    
 
     // Limpiar el body overflow cuando se abre/cierra el menú móvil
     if (isMobileMenuOpen) {
