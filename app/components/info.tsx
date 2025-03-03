@@ -2,13 +2,14 @@ import { BentoGrid, BentoItem } from "./bento-grid"
 import { Dumbbell, Bolt, Shield, Star, MessageCircle, Lightbulb, BookOpen } from "lucide-react"
 import { Button } from "@/app/components/button"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export function InfoSection() {
   return (
     <section className="py-20 px-4 bg-grisoscuro">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-rojoprincipal">
-          Potencia tu rendimiento con nuestro asesoramiento
+          Potenciá tu rendimiento con nuestro asesoramiento
         </h2>
         <BentoGrid>
           {/* Asesoramiento Personalizado */}
@@ -19,13 +20,15 @@ export function InfoSection() {
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-xl font-bold mb-2">¿No sabes qué suplemento elegir?</h3>
-              <p className="mb-4">Te asesoramos según tus objetivos y te recomendamos el mejor plan de suplementación.</p>
-              <Button
-                variant="outline"
-                className="text-rojoprincipal border-rojoprincipal hover:bg-rojoprincipal hover:text-blanco"
-              >
-                Contactar asesor <MessageCircle className="ml-2" />
-              </Button>
+              <p className="mb-4">Te asesoramos según tus objetivos y te recomendamos el mejor plan de suplementación acompañado de una recomendación de ejercicios para potenciar el suplemento</p>
+              <Link href="www.whatsapp.com/1111111">
+                <Button
+                  variant="outline"
+                  className="text-rojoprincipal border-rojoprincipal hover:bg-rojoprincipal hover:text-blanco"
+                >
+                  Contactar asesor <MessageCircle className="ml-2" />
+                </Button>
+              </Link>
             </motion.div>
           </BentoItem>
 
@@ -62,17 +65,14 @@ export function InfoSection() {
 
           {/* Guía rápida sobre suplementos */}
           <BentoItem gradient="primary">
-            <div className="flex items-center space-x-3">
-              <BookOpen className="text-rojoprincipal" size={32} />
-              <h3 className="text-xl font-bold">Guía rápida sobre suplementos</h3>
+          <h3 className="text-xl font-bold mb-4">Resultados que hablan por sí solos</h3>
+            <div className="flex items-start mb-4">
+              <Star className="text-rojoprincipal mr-2 shrink-0" />
+              <p className="italic">
+                {"Gracias al asesoramiento de ProtFit, logré definir mi cuerpo y mejorar mi resistencia."}
+              </p>
             </div>
-            <p className="mt-2">Descubre qué suplemento es ideal para tu entrenamiento y objetivos.</p>
-            <Button
-              variant="outline"
-              className="text-rojoprincipal border-rojoprincipal hover:bg-rojoprincipal hover:text-blanco mt-4"
-            >
-              Ver guía <Lightbulb className="ml-2" />
-            </Button>
+            <p className="text-right">- Lucas S., Entrenador Personal</p>
           </BentoItem>
 
           {/* Más sobre ProtFit */}
@@ -81,12 +81,14 @@ export function InfoSection() {
             <p className="mb-4">
               Nos dedicamos a potenciar tu rendimiento con asesoramiento experto y los mejores suplementos del mercado.
             </p>
-            <Button
-              variant="outline"
-              className="text-rojoprincipal border-rojoprincipal hover:bg-rojoprincipal hover:text-blanco"
-            >
-              Conoce nuestra historia
-            </Button>
+            <Link href="/nosotros">
+              <Button
+                variant="outline"
+                className="text-rojoprincipal border-rojoprincipal hover:bg-rojoprincipal hover:text-blanco"
+              >
+                Conocé sobre nosotros
+              </Button>
+            </Link>
           </BentoItem>
         </BentoGrid>
       </div>
