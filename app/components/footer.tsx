@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="bg-grisoscuro text-blanco p-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4 text-rojoprincipal">Protfit</h3>
+          <h3 className="text-xl font-bold mb-4 text-rojoprincipal">Toribio</h3>
           <p>Tu tienda de confianza para suplementos deportivos de alta calidad.</p>
         </div>
         <div>
@@ -42,7 +42,7 @@ export function Footer() {
         </div>
       </div>
       <div className="mt-8 text-center text-sm">
-        <p>&copy; 2025 Protfit. Todos los derechos reservados.</p>
+        <p>&copy; 2025. Hecho por Skyward Digital Solutions. Todos los derechos reservados.</p>
       </div>
     </footer>
   )
