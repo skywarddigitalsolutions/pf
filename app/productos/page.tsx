@@ -56,7 +56,7 @@ function ProductosContent() {
   }, [searchParams])
 
   return (
-    <div className="">
+    <div className="bg-negro">
       <h1 className="text-4xl font-bold mb-8 text-center text-rojoprincipal">Nuestros Productos</h1>
 
       <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -157,7 +157,7 @@ function ProductosContent() {
 
 export default function Productos() {
   return (
-    <Suspense fallback={<div className="text-center text-white">Cargando productos...</div>}>
+    <Suspense fallback={<div className="bg-negro text-center text-white">Cargando productos...</div>}>
       <Navbar />
       <main className="flex-grow pt-20 px-4 bg-negro pb-12">
         <ProductosContent />
