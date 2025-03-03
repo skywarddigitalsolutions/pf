@@ -8,27 +8,7 @@ import { Footer } from "@/app/components/footer"
 import { Button } from "@/app/components/button"
 import { ArrowLeft, ShoppingCart } from "lucide-react"
 import { motion } from "framer-motion"
-
-// Simulamos una base de datos de productos
-const products = [
-  {
-    detail: "proteina-whey",
-    name: "Proteína Whey",
-    description:
-      "Proteína de suero de leche de alta calidad para recuperación muscular. Ideal para después del entrenamiento, ayuda a la síntesis de proteínas musculares y favorece la recuperación.",
-    imageUrl: "/placeholder.svg?height=400&width=400",
-    category: "Proteínas",
-    objective: ["Masa muscular", "Recuperación"],
-    price: 29.99,
-    details: [
-      "25g de proteína por porción",
-      "Bajo en carbohidratos y grasas",
-      "Contiene todos los aminoácidos esenciales",
-      "Sabor delicioso y fácil de mezclar",
-    ],
-  },
-  // ... Aquí irían el resto de los productos
-]
+import {products} from "@/app/data/products"
 
 export default function ProductDetail({ params }: { params: { detail: string } }) {
   const [product, setProduct] = useState<any>(null)
@@ -57,7 +37,7 @@ export default function ProductDetail({ params }: { params: { detail: string } }
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-grisoscuro to-negro text-blanco">
       <Navbar />
-      <main className="flex-grow pt-20 px-4">
+      <main className="flex-grow pt-20 px-4 pb-24">
         <div className="container mx-auto">
           <Button
             variant="ghost"

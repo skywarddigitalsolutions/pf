@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/app/components/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Hero() {
   const [text, setText] = useState("")
@@ -23,11 +24,11 @@ export function Hero() {
 
 <div className="absolute inset-0 z-0 bg-negro opacity-5">
         <Image
-          src="/fondo.webp" // Asegúrate de que la imagen esté en la carpeta 'public' de tu proyecto
+          src="/fondo.webp" 
           alt="Fondo"
           layout="fill"
           objectFit="cover"
-          quality={100} // Ajusta la calidad si es necesario
+          quality={100} 
         />
       </div>
       {/* Animated background shapes */}
@@ -86,9 +87,11 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Button size="lg" className="bg-rojoprincipal hover:bg-rojosecundario text-blanco">
-            Ver productos <ArrowRight className="ml-2" />
-          </Button>
+          <Link href="/productos">
+            <Button size="lg" className="bg-rojoprincipal hover:bg-rojosecundario text-blanco">
+              Ver productos <ArrowRight className="ml-2" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
   <div className="absolute bottom-0 w-full h-64 bg-gradient-to-b from-transparent to-negro"></div>
