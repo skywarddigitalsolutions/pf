@@ -5,7 +5,7 @@ export interface Product {
   imageUrl: string
   category: string
   objective: string[]
-  price: number
+  price: string[]
   details: string[]
 }
 
@@ -15,10 +15,10 @@ export const products = [
     detail: "proteina-whey",
     name: "Proteína Whey",
     description: "Proteína de suero de leche de alta calidad para recuperación muscular.",
-    imageUrl: "/productos/proteina-whey.jpg",
+    imageUrl: "/proteina.jpg",
     category: "Proteínas",
     objective: ["Masa muscular", "Recuperación"],
-    price: 29.99,
+    price: "45.000",
     details: [
       "25g de proteína por porción",
       "Bajo en carbohidratos y grasas",

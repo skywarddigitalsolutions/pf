@@ -56,7 +56,7 @@ function ProductosContent() {
   }, [searchParams])
 
   return (
-    <div className="container mx-auto bg-negro">
+    <div className="">
       <h1 className="text-4xl font-bold mb-8 text-center text-rojoprincipal">Nuestros Productos</h1>
 
       <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -108,7 +108,7 @@ function ProductosContent() {
           </Button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {filteredProducts.map((product, index) => (
             <motion.div
               key={product.detail}
@@ -117,9 +117,9 @@ function ProductosContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="relative h-48">
+              <div className="relative h-80">
                 <Image
-                  src={product.imageUrl || "/placeholder.svg"}
+                  src={product.imageUrl}
                   alt={product.name}
                   layout="fill"
                   objectFit="cover"
@@ -130,8 +130,8 @@ function ProductosContent() {
                 <h3 className="text-xl font-bold mb-2 text-rojoprincipal">{product.name}</h3>
                 <p className="text-sm mb-4 text-blanco/80">{product.description}</p>
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-sm font-semibold text-rojosecundario">{product.category}</span>
-                  <span className="text-lg font-bold text-blanco">${product.price.toFixed(2)}</span>
+                  <span className="text-sm font-semibold text-rojosecundario">Objetivos:</span>
+                  <span className="text-lg font-bold text-blanco">${product.price}</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {product.objective.map((obj) => (
@@ -159,7 +159,7 @@ export default function Productos() {
   return (
     <Suspense fallback={<div className="text-center text-white">Cargando productos...</div>}>
       <Navbar />
-      <main className="flex-grow pt-20 px-4">
+      <main className="flex-grow pt-20 px-4 bg-negro pb-12">
         <ProductosContent />
       </main>
       <Footer />
