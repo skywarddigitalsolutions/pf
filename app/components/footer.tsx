@@ -38,7 +38,7 @@ export function Footer() {
           <p>Calle Ejemplo, 123</p>
           <p>Ciudad, País</p>
           <p>Teléfono: (123) 456-7890</p>
-          <p>Email: info@protfit.com</p>
+          <p>Email: info@toribio.com</p>
         </div>
       </div>
       <div className="mt-8 text-center text-sm">

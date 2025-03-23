@@ -6,24 +6,26 @@ import { ArrowRight } from "lucide-react"
 
 const products = [
   {
-    name: "Proteína Whey",
-    description: "Recuperación muscular de primera",
-    image: "/proteina.jpg",
+    name: "Whey Protein",
+    description: "Recuperación muscular de primera. Ideal para aumentar la masa muscular y acelerar la recuperación después del entrenamiento.",
+    image: "/proteina1.jpg",
   },
   {
     name: "Pre-entreno",
-    description: "Energía explosiva para tus sesiones",
-    image: "/prewar.png",
+    description: "Energía explosiva para tus sesiones. Mejora tu rendimiento y concentración durante los entrenamientos intensos.",
+    image: "/prewar1.webp",
   },
   {
     name: "BCAA",
-    description: "fdfd",
-    image: "/creatina.webp",
+    description: "Aminoácidos esenciales para reducir la fatiga muscular y promover una recuperación más rápida.",
+    image: "/bcca1.webp",
   },
-  { name: "Creatina", 
-    description: "Potencia tu fuerza y rendimiento", 
-    image: "/proteina2.webp" },
-]
+  {
+    name: "Creatina",
+    description: "Potencia tu fuerza y rendimiento. Ayuda a mejorar la explosividad y resistencia en entrenamientos de alta intensidad.",
+    image: "/creatinemicronized1.webp",
+  },
+];
 
 export function ProductosDestacados() {
   return (
@@ -43,11 +45,11 @@ export function ProductosDestacados() {
               <div className="relative bg-negro p-6 rounded-lg shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300">
                 <div className="mb-4 overflow-hidden rounded-lg">
                   <Image
-                    src={product.image || "/placeholder.svg"}
+                    src={product.image}
                     alt={product.name}
                     width={300}
                     height={300}
-                    className="object-cover w-full h-72 transform group-hover:scale-110 transition-transform duration-300"
+                    className="object-contain w-full h-72 transform group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-blanco">{product.name}</h3>

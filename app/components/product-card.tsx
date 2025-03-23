@@ -13,7 +13,7 @@ export function ProductCard({ name, description, imageUrl }: ProductCardProps) {
     <Card className="overflow-hidden">
       <CardHeader className="p-0">
         <div className="relative h-48 w-full">
-          <Image src={imageUrl || "/placeholder.svg"} alt={name} layout="fill" objectFit="cover" />
+          <Image src={imageUrl || "/logo.png"} alt={name} layout="fill" objectFit="fill" />
         </div>
       </CardHeader>
       <CardContent className="p-4">

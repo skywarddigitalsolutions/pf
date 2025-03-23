@@ -12,45 +12,46 @@ const highlights = [
     icon: Dumbbell,
     title: "Desarrollo muscular",
     description: "Aumenta tu masa muscular con proteínas, creatina y aminoácidos esenciales.",
-    filterValue: "Masa muscular",
+    filterValue: ["Proteínas", "Aminoácidos", "Creatina"],
   },
   {
     icon: Flame,
     title: "Quemar grasa",
     description: "Acelera tu metabolismo con quemadores, L-carnitina y CLA.",
-    filterValue: "Definición",
+    filterValue: ["Termogénicos", "Salud"],
   },
   {
     icon: Scale,
     title: "Bajar de peso",
     description: "Controla tu dieta con suplementos saciantes y termogénicos naturales.",
-    filterValue: "Definición",
+    filterValue: ["Termogénicos", "Vitaminas y Minerales"],
   },
   {
     icon: Bolt,
     title: "Energía",
     description: "Impulsa tu rendimiento con pre-entrenos, cafeína y BCAA.",
-    filterValue: "Energía",
+    filterValue: ["Pre entreno", "Aminoácidos"],
   },
   {
     icon: HeartPulse,
     title: "Resistencia y explosión",
     description: "Maximiza tu resistencia con electrolitos, citrulina y óxido nítrico.",
-    filterValue: "Rendimiento",
+    filterValue: ["Salud", "Aminoácidos"],
   },
   {
     icon: RefreshCcw,
     title: "Recuperación muscular",
     description: "Reduce la fatiga con glutamina, magnesio y proteínas de rápida absorción.",
-    filterValue: "Recuperación",
+    filterValue: ["Proteínas", "Vitaminas y Minerales", "Aminoácidos"],
   },
 ]
 
 export function Objetivos() {
   const router = useRouter()
 
-  const handleObjetivoClick = (filterValue: string) => {
-    router.push(`/productos?objetivo=${encodeURIComponent(filterValue)}`)
+  const handleObjetivoClick = (filterValues: string[]) => {
+    const queryString = filterValues.map((value) => `categoria=${encodeURIComponent(value)}`).join("&")
+    router.push(`/productos?${queryString}`)
   }
 
   return (
@@ -76,7 +77,7 @@ export function Objetivos() {
                 <h3 className="text-xl font-bold text-blanco">{item.title}</h3>
               </div>
               <p className="text-blanco/80 mb-4">{item.description}</p>
-              
+             
             </motion.div>
           ))}
         </div>

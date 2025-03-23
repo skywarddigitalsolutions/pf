@@ -1,5 +1,5 @@
 import { BentoGrid, BentoItem } from "./bento-grid"
-import { Dumbbell, Bolt, Shield, Star, MessageCircle, Lightbulb, BookOpen } from "lucide-react"
+import { Dumbbell, Bolt, Shield, Star, MessageCircle} from "lucide-react"
 import { Button } from "@/app/components/button"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -57,7 +57,7 @@ export function InfoSection() {
             <div className="flex items-start mb-4">
               <Star className="text-rojoprincipal mr-2 shrink-0" />
               <p className="italic">
-                {"Gracias al asesoramiento de ProtFit, logré definir mi cuerpo y mejorar mi resistencia."}
+                {"Gracias al asesoramiento de Toribio, logré definir mi cuerpo y mejorar mi resistencia."}
               </p>
             </div>
             <p className="text-right">- Lucas S., Entrenador Personal</p>
@@ -69,15 +69,14 @@ export function InfoSection() {
             <div className="flex items-start mb-4">
               <Star className="text-rojoprincipal mr-2 shrink-0" />
               <p className="italic">
-                {"Gracias al asesoramiento de ProtFit, logré definir mi cuerpo y mejorar mi resistencia."}
+                {"Gracias al asesoramiento de Toribio, logré definir mi cuerpo y mejorar mi resistencia."}
               </p>
             </div>
             <p className="text-right">- Lucas S., Entrenador Personal</p>
           </BentoItem>
 
-          {/* Más sobre ProtFit */}
           <BentoItem gradient="secondary" className="md:col-span-1">
-            <h2 className="text-2xl font-bold mb-4">Sobre ProtFit</h2>
+            <h2 className="text-2xl font-bold mb-4">Sobre Toribio</h2>
             <p className="mb-4">
               Nos dedicamos a potenciar tu rendimiento con asesoramiento experto y los mejores suplementos del mercado.
             </p>

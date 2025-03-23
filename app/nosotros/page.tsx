@@ -63,7 +63,7 @@ export default function Nosotros() {
               >
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-rojoprincipal">Nuestra Historia</h2>
                 <p className="text-blanco/80 mb-4">
-                  SupleDeportes nació en 2010 con una misión clara: proporcionar suplementos deportivos de la más alta
+                  Toribio nació en 2010 con una misión clara: proporcionar suplementación deportiva y nutricional de la más alta
                   calidad a precios accesibles. Lo que comenzó como una pequeña tienda local se ha convertido en un
                   referente nacional en nutrición deportiva.
                 </p>
@@ -127,8 +127,8 @@ export default function Nosotros() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  name: "Carlos Rodríguez",
-                  position: "Fundador & CEO",
+                  name: "Cristian López",
+                  position: "Personal Trainer IFBB",
                   image: "/placeholder.svg?height=400&width=400&text=Carlos",
                 },
                 {
@@ -137,8 +137,8 @@ export default function Nosotros() {
                   image: "/placeholder.svg?height=400&width=400&text=Laura",
                 },
                 {
-                  name: "Miguel Sánchez",
-                  position: "Especialista en Suplementación",
+                  name: "Franco Salas",
+                  position: "Especialista en Suplementación y preparador físico IPEF",
                   image: "/placeholder.svg?height=400&width=400&text=Miguel",
                 },
                 {
@@ -248,7 +248,7 @@ export default function Nosotros() {
                         <MapPin className="h-6 w-6 text-rojoprincipal mr-4 mt-1" />
                         <div>
                           <h3 className="font-semibold mb-1">Dirección</h3>
-                          <p className="text-blanco/70">Calle Ejemplo 123, Ciudad, País</p>
+                          <p className="text-blanco/70">CABA</p>
                         </div>
                       </div>
 
