@@ -6,7 +6,6 @@ export interface Product {
   images?: string[] 
   category: string
   objective: string[]
-  price: string[]
   details: string[]
   modoDeUso?: string[]
   beneficios?: string[]
@@ -24,7 +23,7 @@ export const products: Product[] = [
     ],
     category: "Salud",
     objective: ["Equilibrio hormonal", "Vitalidad"],
-    price: ["35.000"],
+    
     details: [
       "Ayuda a mantener el equilibrio hormonal",
       "Favorece la producción natural de testosterona",
@@ -64,7 +63,6 @@ export const products: Product[] = [
     ],
     category: "Aminoácidos",
     objective: ["Recuperación muscular", "Crecimiento muscular"],
-    price: ["26.481,00"],
     details: [
       "7 g de BCAA por porción",
       "Ratio 8:1:1 de L-Leucina, L-Isoleucina y L-Valina",
@@ -113,7 +111,6 @@ export const products: Product[] = [
     ],
     category: "Salud",
     objective: ["Recuperación articular", "Salud ósea"],
-    price: ["No disponible"],
     details: [
       "Colágeno hidrolizado",
       "Ácido hialurónico",
@@ -146,7 +143,6 @@ export const products: Product[] = [
     ],
     category: "Proteínas",
     objective: ["Recuperación muscular", "Crecimiento muscular"],
-    price: ["$3,599"],
     details: [
       "25g de proteína por porción",
       "Bajo en carbohidratos",
@@ -178,7 +174,6 @@ export const products: Product[] = [
     ],
     category: "Proteínas",
     objective: ["Recuperación", "Crecimiento muscular"],
-    price: ["$4,499"],
     details: [
       "Aislado de proteína de suero",
       "Bajo en lactosa",
@@ -210,7 +205,6 @@ export const products: Product[] = [
     ],
     category: "Creatina",
     objective: ["Aumento de fuerza", "Mejora del rendimiento"],
-    price: ["$1,299"],
     details: [
       "Creatina micronizada para mejor absorción",
       "Aumenta el rendimiento y la fuerza",
@@ -239,7 +233,6 @@ export const products: Product[] = [
     ],
     category: "Pre entreno",
     objective: ["Energía", "Rendimiento físico"],
-    price: ["$2,399"],
     details: [
       "Mejora la energía y concentración",
       "Aumenta el rendimiento físico",
@@ -272,7 +265,6 @@ export const products: Product[] = [
     ],
     category: "Vitaminas y minerales",
     objective: ["Salud cardiovascular", "Antienvejecimiento"],
-    price: ["Consultar"],
     details: [
       "500 mg de resveratrol por porción",
       "Apoya la salud cardiovascular",
@@ -308,7 +300,6 @@ export const products: Product[] = [
     ],
     category: "Aminoácidos",
     objective: ["Recuperación muscular", "Desarrollo muscular"],
-    price: ["Consultar"],
     details: [
       "Contiene aminoácidos esenciales y BCAA",
       "Favorece la síntesis de proteínas",
@@ -342,7 +333,6 @@ export const products: Product[] = [
     ],
     category: "Creatina",
     objective: ["Aumento de fuerza", "Recuperación muscular"],
-    price: ["Consultar"],
     details: [
       "Mejora la producción de energía ATP",
       "Aumenta la fuerza y potencia muscular",
@@ -373,7 +363,6 @@ export const products: Product[] = [
     ],
     category: "Creatina",
     objective: ["Aumento de fuerza", "Recuperación muscular"],
-    price: ["Consultar"],
     details: [
       "Fórmula micronizada para una mejor absorción.",
       "Aumenta la producción de energía ATP.",
@@ -405,7 +394,6 @@ export const products: Product[] = [
     ],
     category: "Proteínas",
     objective: ["Crecimiento muscular", "Recuperación muscular"],
-    price: ["$4,199"],
     details: [
       "25g de proteína por porción",
       "Bajo en carbohidratos",
@@ -435,7 +423,6 @@ export const products: Product[] = [
     ],
     category: "Proteínas",
     objective: ["Desarrollo muscular", "Recuperación post-entreno"],
-    price: ["Consultar"],
     details: [
       "70 servicios por envase.",
       "Alta concentración de proteína de suero.",
@@ -468,7 +455,6 @@ export const products: Product[] = [
     ],
     category: "Termogénicos",
     objective: ["Reducción de grasa", "Energía"],
-    price: ["$2,799"],
     details: [
       "Acelera el metabolismo",
       "Reduce la grasa corporal",
@@ -501,7 +487,6 @@ export const products: Product[] = [
     ],
     category: "Vitaminas y Minerales",
     objective: ["Relajación muscular", "Mejora del rendimiento"],
-    price: ["$799"],
     details: [
       "Mejora la función muscular y nerviosa",
       "Ayuda a reducir calambres",
@@ -532,7 +517,6 @@ export const products: Product[] = [
       ],
       category: "Vitaminas y Minerales",
       objective: ["Salud cardiovascular", "Salud cerebral"],
-      price: ["$1,499"],
       details: [
         "Omega-3 EPA y DHA",
         "Aporta 1000 mg de omega-3 por cápsula",
@@ -558,7 +542,6 @@ export const products: Product[] = [
       ],
       category: "Termogénicos",
       objective: ["Quema de grasa", "Energía"],
-      price: ["$2,499"],
       details: [
         "Acelerador de metabolismo",
         "Incrementa la energía",
@@ -586,7 +569,7 @@ export const products: Product[] = [
       ],
       category: "Pre entreno",
       objective: ["Rendimiento físico", "Energía"],
-      price: ["$2,199"],
+      
       details: [
         "Aumenta la energía",
         "Mejora el enfoque y la resistencia",
@@ -614,7 +597,7 @@ export const products: Product[] = [
       ],
       category: "Proteínas",
       objective: ["Crecimiento muscular", "Quema de grasa"],
-      price: ["$3,899"],
+      
       details: [
         "Proteína de suero",
         "Contiene CLA y L-Carnitina",
@@ -643,7 +626,7 @@ export const products: Product[] = [
       ],
       category: "Ganadores de masa",
       objective: ["Aumento de masa muscular", "Energía"],
-      price: ["$3,199"],
+      
       details: [
         "Alta carga calórica",
         "Mezcla de carbohidratos y proteínas",
@@ -673,7 +656,7 @@ export const products: Product[] = [
       ],
       category: "Vitaminas y Minerales",
       objective: ["Recuperación", "Sueño reparador"],
-      price: ["$1,099"],
+      
       details: [
         "Aumenta los niveles de testosterona",
         "Mejora el sueño y la recuperación",
@@ -702,7 +685,7 @@ export const products: Product[] = [
       ],
       category: "Vitaminas y Minerales",
       objective: ["Rendimiento físico", "Energía"],
-      price: ["$2,399"],
+      
       details: [
         "Mejora el flujo sanguíneo",
         "Incrementa la energía durante el entrenamiento",
@@ -730,8 +713,7 @@ export const products: Product[] = [
       ],
       category: "Vitaminas y Minerales",
       objective: ["Reposición de electrolitos", "Rendimiento"],
-      price: ["$799"],
-      details: [
+           details: [
         "Mezcla de electrolitos como sodio, potasio y magnesio",
         "Ideal para entrenamientos largos o intensos",
       ],
@@ -758,7 +740,7 @@ export const products: Product[] = [
       ],
       category: "Vitaminas y Minerales",
       objective: ["Salud ósea", "Sistema inmune"],
-      price: ["$1,199"],
+      
       details: [
         "Mejora la absorción de calcio en los huesos",
         "Refuerza el sistema inmune",
@@ -786,7 +768,7 @@ export const products: Product[] = [
       ],
       category: "Termogénicos",
       objective: ["Quema de grasa", "Energía"],
-      price: ["$2,699"],
+      
       details: [
         "Potente fórmula termogénica",
         "Aumenta la energía y el enfoque",
