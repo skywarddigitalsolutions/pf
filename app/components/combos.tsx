@@ -9,7 +9,7 @@ const combos = [
   {
     name: "Combo Fuerza",
     description: "Ideal para ganar masa muscular",
-    image: "/proteina.jpg",
+    image: "/proteina1.webp",
     route: "/combos/fuerza",
   },
   {
