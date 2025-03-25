@@ -222,7 +222,6 @@ export default function ProductDetail() {
               </div>
 
               <div className="flex items-center justify-between py-4 border-t border-b border-blanco/10">
-                <span className="text-3xl font-bold">${product.price && product.price[0]}</span>
                 <div className="flex items-center text-green-500">
                   <Check className="mr-1 h-5 w-5" />
                   <span>Disponible</span>

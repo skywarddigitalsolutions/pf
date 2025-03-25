@@ -208,7 +208,6 @@ function ProductosContent() {
                 </p>
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-sm font-semibold text-rojosecundario">Objetivos:</span>
-                  <span className="text-lg font-bold text-blanco">${product.price}</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {product.objective.map((obj) => (
