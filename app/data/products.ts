@@ -167,7 +167,7 @@ export const products: Product[] = [
     detail: "iso-gold-protein",
     name: "Iso Gold Protein",
     description: "Proteína aislada de suero de leche de alta calidad para máximo rendimiento.",
-    imageUrl: "/isogold1.png",
+    imageUrl: "/isogold1.webp",
     images: [
       "/isogold1.webp", 
       "/isogold2.webp", 
