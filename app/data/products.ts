@@ -785,7 +785,270 @@ export const products: Product[] = [
         "Extracto de té verde",
       ],
     },
- 
+   {
+      detail: "combo-crecimiento-muscular-star-nutrition",
+      name: "Combo Crecimiento Muscular",
+      description:
+        "Suplemento ideal para potenciar el crecimiento muscular y mejorar el rendimiento. Contiene proteína whey, creatina monohidratada y BCAA.",
+      imageUrl: "/combodesarrolloyrecuperacion1.webp",
+      images: [
+        "/combodesarrolloyrecuperacion1.webp",
+        "/combodesarrolloyrecuperacion2.webp",
+        "/combodesarrolloyrecuperacion3.webp",
+        "/combodesarrolloyrecuperacion4.webp",
+      ],
+      category: "Combos",
+      objective: ["Crecimiento muscular", "Recuperación"],
+      details: [
+        "Incluye proteína Whey Doy Pack Star Nutrition 2 lb.",
+        "Creatina monohidratada Star Nutrition 300 g.",
+        "BCAA 2:1:1 en cápsulas (el producto puede variar según disponibilidad).",
+      ],
+      modoDeUso: [
+        "Diluir un scoop de proteína en 150-200cc de agua o leche.",
+        "Consumir 5g de creatina después del ejercicio.",
+        "Tomar 6 comprimidos de BCAA antes del ejercicio o con una comida.",
+      ],
+      beneficios: [
+        "Aumenta la fuerza y resistencia durante el ejercicio.",
+        "Favorece el crecimiento muscular.",
+        "Mejora la recuperación y previene la fatiga muscular.",
+        "Permite entrenamientos más exigentes.",
+      ],
+      ingredientes: [
+        "Proteína de suero de leche (Whey Protein)",
+        "Creatina monohidratada",
+        "BCAA 2:1:1 (aminoácidos de cadena ramificada)",
+      ],
+    },    
+   {
+      detail: "combo-crecimiento-muscular-ena",
+      name: "Combo Desarollo Magro",
+      description:
+        "Suplemento ideal para el crecimiento muscular y la recuperación. Contiene proteína de suero de leche y creatina micronizada 100% pura.",
+      imageUrl: "/combodesarrollomagro1.webp",
+      images: [
+        "/combodesarrollomagro1.webp",
+        "/combodesarrollomagro2.webp",
+        "/combodesarrollomagro3.webp",
+      ],
+      category: "Combos",
+      objective: ["Crecimiento muscular", "Recuperación"],
+      details: [
+        "79% de pura proteína instantánea.",
+        "Contiene creatina micronizada 100% pura.",
+        "Favorece el crecimiento de tejidos.",
+      ],
+      modoDeUso: [
+        "Consumir 2 medidas diarias (cada medida aporta 24 g).",
+        "Tomar 1 medida a media mañana y otra a media tarde, o bien 1 antes y 1 después del entrenamiento.",
+        "Mezclar cada medida con 150-200 cc de leche.",
+      ],
+      beneficios: [
+        "Favorece el crecimiento muscular.",
+        "Mejora la recuperación.",
+        "Ayuda a la definición muscular.",
+      ],
+      ingredientes: [
+        "Proteína de suero de leche",
+        "Creatina micronizada 100% pura",
+      ],
+    },
+    {
+      detail: "combo-mass-creatina-bcaa-gold-nutrition",
+      name: "Combo Fuerza y Desarrollo",
+      description: "Pack completo para el crecimiento muscular, recuperación y aumento de fuerza. Incluye Gainer Gold 5lb, Creatina Monohidratada 300g y BCAA 2000 x 120 cápsulas.",
+      imageUrl: "/combovolumen1.webp",
+      images: [
+        "/combovolumen1.webp",
+        "/combovolumen2.webp",
+        "/combovolumen3.webp",
+        "/combovolumen4.webp"
+      ],
+      category: "Combos",
+      objective: ["Aumento de masa muscular", "Fuerza"],
+      
+      details: [
+        "Gainer Gold 5lb con fórmula 8 en 1.",
+        "Creatina Monohidratada Gold Nutrition 300g.",
+        "BCAA 2000 x 120 cápsulas."
+      ],
+      modoDeUso: [
+        "Gainer Gold: Mezclar 1 scoop con 200ml de agua o leche.",
+        "Creatina: Consumir 5g diarios en agua o jugo.",
+        "BCAA: Tomar 2 cápsulas antes y 2 cápsulas después del entrenamiento."
+      ],
+      beneficios: [
+        "Aumenta la masa muscular.",
+        "Mejora la recuperación muscular.",
+        "Incrementa la fuerza y resistencia.",
+        "Previene la fatiga muscular."
+      ],
+      ingredientes: [
+        "Proteína concentrada y caseína.",
+        "Creatina Monohidratada.",
+        "BCAA (Leucina, Isoleucina, Valina).",
+        "Vitaminas y Minerales."
+      ]
+    },
+    {
+      detail: "combo-whey-creatina-preworkout-ena",
+      name: "Combo Fuerza y Resistencia",
+      description: "Ideal para mejorar el rendimiento, la fuerza y la resistencia. Incluye Whey Protein True 1kg, Creatina Micronizada 300g y Pre-Workout Pre War 300g.",
+      imageUrl: "/combofuerzaresistencia1.jpg",
+      images: [
+        "/combofuerzaresistencia1.jpg"
+      ],
+      category: "Combos",
+      objective: ["Fuerza", "Resistencia", "Recuperación muscular"],
+    
+      details: [
+        "Whey Protein True 1kg con proteínas de suero concentradas e hidrolizadas.",
+        "Creatina Micronizada 300g para mayor fuerza y explosividad.",
+        "Pre-Workout Pre War 300g para potenciar el rendimiento en entrenamientos intensos."
+      ],
+      modoDeUso: [
+        "Whey Protein: Mezclar 1 scoop con 200ml de agua o leche después del entrenamiento.",
+        "Creatina: Consumir 5g diarios en agua o jugo.",
+        "Pre-Workout: Tomar 1 scoop con agua 20-30 minutos antes del entrenamiento."
+      ],
+      beneficios: [
+        "Aumenta la fuerza y resistencia.",
+        "Mejora la recuperación muscular.",
+        "Incrementa la energía y el rendimiento en entrenamientos intensos."
+      ],
+      ingredientes: [
+        "Proteína de suero concentrada e hidrolizada.",
+        "Creatina Micronizada.",
+        "Beta-Alanina, Cafeína y L-Arginina en el Pre-Workout."
+      ]
+    },
+    {
+      detail: "combo-whey-creatina-ena",
+      name: "Combo Muscular y Cognitivo",
+      description: "Perfecto para el desarrollo muscular y el rendimiento mental. Incluye Whey Protein True Made 2kg y Creatina Monohidratada en cápsulas.",
+      imageUrl: "/combomuscularycognitivo1.jpg",
+      images: [
+        "/combomuscularycognitivo1.jpg"
+      ],
+      category: "Combos",
+      objective: ["Masa muscular", "Rendimiento cognitivo"],
+    
+      details: [
+        "Whey Protein True Made 2kg con proteínas de suero aisladas y concentradas.",
+        "Creatina Monohidratada en cápsulas para mejorar fuerza y funciones cognitivas."
+      ],
+      modoDeUso: [
+        "Whey Protein: Mezclar 1 scoop con 200ml de agua o leche después del entrenamiento.",
+        "Creatina: Consumir 3 a 5g diarios con agua o jugo, preferiblemente después del entrenamiento."
+      ],
+      beneficios: [
+        "Favorece el desarrollo y recuperación muscular.",
+        "Aumenta la fuerza y el rendimiento físico.",
+        "Mejora la función cognitiva y la concentración."
+      ],
+      ingredientes: [
+        "Proteína de suero aislada y concentrada.",
+        "Creatina Monohidratada."
+      ]
+    },
+    {
+      detail: "combo-ultra-mass-creatina-ena",
+      name: "Combo Masa Muscular",
+      description: "Este combo está diseñado para quienes buscan incrementar su masa muscular y mejorar el rendimiento físico. Incluye Ultra Mass sabor chocolate de 3 kg y Creatina Micronizada Pure Creatine ENA de 300 g.",
+      imageUrl: "/combofuerza1.jpg",
+      images: [
+        "/combofuerza1.jpg",
+      ],
+      category: "Combos",
+      objective: ["Aumento masa muscular", "Recuperación muscular"],
+    
+      details: [
+        "Ultra Mass 3 kg sabor chocolate: suplemento que combina proteínas de alto valor biológico, carbohidratos, vitaminas y minerales para favorecer el aumento de peso y masa muscular.",
+        "Creatina Micronizada 300 g: creatina monohidratada pura que mejora la potencia muscular y retrasa la fatiga durante el entrenamiento."
+      ],
+      modoDeUso: [
+        "Ultra Mass: Mezclar 100 g (aproximadamente 3 medidas) con 300 ml de agua o leche. Consumir una porción diaria, preferiblemente después del entrenamiento.",
+        "Creatina Micronizada: Diluir una medida (6,5 g) en 200 ml de agua o jugo. Consumir una porción diaria, idealmente antes del entrenamiento."
+      ],
+      beneficios: [
+        "Contribuye al aumento de masa muscular y peso corporal.",
+        "Mejora la potencia y resistencia durante el ejercicio.",
+        "Favorece una rápida recuperación muscular post-entrenamiento."
+      ],
+      ingredientes: [
+        "Ultra Mass: Maltodextrina, proteína de suero concentrada, sacarosa, glucosa, aislado proteico de soja, vitaminas y minerales.",
+        "Creatina Micronizada: Creatina monohidratada pura."
+      ]
+    },
+    {
+  detail: "combo-recuperacion-ena",
+  name: "Combo Recuperación - ENA",
+  description: "Este combo está diseñado para facilitar la regeneración de tejidos musculares después del entrenamiento y retrasar la fatiga. Incluye Óxido Nítrico y TrueMade Whey Protein de 2 lb.",
+  imageUrl: "/comboavanzado1.jpg",
+  images: [
+    "/comboavanzado1.jpg"
+  ],
+  category: "Combos",
+  objective: ["Recuperación muscular", "Regeneración de tejidos"],
+
+  details: [
+    "Óxido Nítrico: Potente vasodilatador que mejora el flujo sanguíneo, permitiendo una mayor entrega de oxígeno y nutrientes a los músculos. Formulado con arginina alfa ceto glutarato, ornitina y glucosa, favorece una rápida recuperación y crecimiento muscular.",
+    "TrueMade Whey Protein 2 lb: Mezcla de proteínas de suero concentrada (WPC) y aislada (WPI) de máxima pureza y rápida absorción. Proporciona un perfil completo de aminoácidos esenciales para una efectiva recuperación y desarrollo muscular."
+  ],
+  modoDeUso: [
+    "Óxido Nítrico: Consumir según las indicaciones del envase, preferiblemente antes del entrenamiento para optimizar el rendimiento y la recuperación.",
+    "TrueMade Whey Protein: Mezclar una medida con 200 ml de agua o leche. Consumir después del entrenamiento para favorecer la recuperación muscular."
+  ],
+  beneficios: [
+    "Mejora el flujo sanguíneo y la entrega de nutrientes a los músculos.",
+    "Acelera la recuperación y reduce la fatiga post-entrenamiento.",
+    "Proporciona proteínas de alta calidad para el desarrollo y reparación muscular."
+  ],
+  ingredientes: [
+    "Óxido Nítrico: Arginina alfa ceto glutarato, ornitina, glucosa.",
+    "TrueMade Whey Protein: Proteína de suero concentrada (WPC), proteína de suero aislada (WPI)."
+  ]
+},
+{
+  detail: "combo-rendimiento-total",
+  name: "Combo Rendimiento Total",
+  description: "Un combo diseñado para maximizar el rendimiento deportivo, optimizar la recuperación y mejorar la composición corporal. Incluye TrueMade Whey Protein, Hydroxy Max Night, Creatina Micronizada y Re-Load.",
+  imageUrl: "/combograsacorporal1.jpg",
+  images: [
+    "/combograsacorporal1.jpg",
+  ],
+  category: "Combos",
+  objective: ["Aumento de energía", "Reducción de grasa corporal"],
+
+  details: [
+    "TrueMade Whey Protein: Mezcla de proteína de suero concentrada (WPC) e aislada (WPI) de alta pureza y rápida absorción. Favorece el desarrollo muscular y la recuperación post-entrenamiento.",
+    "Hydroxy Max Night: Fórmula nocturna con ingredientes como L-carnitina y extractos naturales que potencian la quema de grasa durante el descanso y mejoran la calidad del sueño.",
+    "Creatina Micronizada: Creatina de alta calidad que mejora la resistencia y el rendimiento deportivo, promoviendo la regeneración de ATP para entrenamientos más intensos.",
+    "Re-Load: Suplemento post-entrenamiento con carbohidratos y electrolitos que ayuda a la recuperación muscular y reposición de energía después del ejercicio intenso."
+  ],
+  modoDeUso: [
+    "TrueMade Whey Protein: Mezclar una medida con 200 ml de agua o leche. Consumir después del entrenamiento.",
+    "Hydroxy Max Night: Tomar según indicaciones del envase antes de dormir.",
+    "Creatina Micronizada: Mezclar una medida con agua o jugo y consumir antes o después del entrenamiento.",
+    "Re-Load: Consumir después del entrenamiento para reponer electrolitos y acelerar la recuperación muscular."
+  ],
+  beneficios: [
+    "Favorece el crecimiento y la recuperación muscular.",
+    "Aumenta la resistencia y la fuerza en entrenamientos de alta intensidad.",
+    "Optimiza la quema de grasa corporal durante el descanso.",
+    "Rehidrata y repone energía después del ejercicio."
+  ],
+  ingredientes: [
+    "TrueMade Whey Protein: Proteína de suero concentrada (WPC), proteína de suero aislada (WPI).",
+    "Hydroxy Max Night: L-carnitina, extractos naturales.",
+    "Creatina Micronizada: Creatina monohidratada de alta pureza.",
+    "Re-Load: Carbohidratos, electrolitos, minerales esenciales."
+  ]
+}
+
+    
+    
 ];
 
 
