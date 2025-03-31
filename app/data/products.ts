@@ -789,7 +789,7 @@ export const products: Product[] = [
       detail: "combo-crecimiento-muscular-star-nutrition",
       name: "Combo Crecimiento Muscular",
       description:
-        "Suplemento ideal para potenciar el crecimiento muscular y mejorar el rendimiento. Contiene proteína whey, creatina monohidratada y BCAA.",
+        "Combinación ideal para el aumento de masa muscular de calidad, rápida recuperación y mayor rendimiento físico en tu entrenamiento y vida diaria",
       imageUrl: "/combodesarrolloyrecuperacion1.webp",
       images: [
         "/combodesarrolloyrecuperacion1.webp",
@@ -825,7 +825,7 @@ export const products: Product[] = [
       detail: "combo-crecimiento-muscular-ena",
       name: "Combo Desarollo Magro",
       description:
-        "Suplemento ideal para el crecimiento muscular y la recuperación. Contiene proteína de suero de leche y creatina micronizada 100% pura.",
+        "Combinación ideal para el crecimiento limpio y masivo de masa muscular, rápida recuperación, mayor resistencia física y mejora de la conexión cognitiva",
       imageUrl: "/combodesarrollomagro1.webp",
       images: [
         "/combodesarrollomagro1.webp",
@@ -857,7 +857,7 @@ export const products: Product[] = [
     {
       detail: "combo-mass-creatina-bcaa-gold-nutrition",
       name: "Combo Fuerza y Desarrollo",
-      description: "Pack completo para el crecimiento muscular, recuperación y aumento de fuerza. Incluye Gainer Gold 5lb, Creatina Monohidratada 300g y BCAA 2000 x 120 cápsulas.",
+      description: "Pack completo para mayor ganancia muscular y aumento de peso corporal, rápida recuperación, resistencia y potencia en los entrenamientos",
       imageUrl: "/combovolumen1.webp",
       images: [
         "/combovolumen1.webp",
@@ -894,7 +894,7 @@ export const products: Product[] = [
     {
       detail: "combo-whey-creatina-preworkout-ena",
       name: "Combo Fuerza y Resistencia",
-      description: "Ideal para mejorar el rendimiento, la fuerza y la resistencia. Incluye Whey Protein True 1kg, Creatina Micronizada 300g y Pre-Workout Pre War 300g.",
+      description: "Combinación ideal para aumentar drasticamente la fuerza sostenida y la energía en los entrenamientos desarrollando masa muscular de tonalidad rocosa",
       imageUrl: "/combofuerzaresistencia1.jpg",
       images: [
         "/combofuerzaresistencia1.jpg"
@@ -926,7 +926,7 @@ export const products: Product[] = [
     {
       detail: "combo-whey-creatina-ena",
       name: "Combo Muscular y Cognitivo",
-      description: "Perfecto para el desarrollo muscular y el rendimiento mental. Incluye Whey Protein True Made 2kg y Creatina Monohidratada en cápsulas.",
+      description: "Este pack brinda un incremento mejorado de masa muscular apoyado en una gran recuperación rápida y sólida. Gran soporte energético y cognitivo ideal para vida diaria",
       imageUrl: "/combomuscularycognitivo1.jpg",
       images: [
         "/combomuscularycognitivo1.jpg"
@@ -955,7 +955,7 @@ export const products: Product[] = [
     {
       detail: "combo-ultra-mass-creatina-ena",
       name: "Combo Masa Muscular",
-      description: "Este combo está diseñado para quienes buscan incrementar su masa muscular y mejorar el rendimiento físico. Incluye Ultra Mass sabor chocolate de 3 kg y Creatina Micronizada Pure Creatine ENA de 300 g.",
+      description: "Este combo está diseñado para quienes buscan icrementar su masa muscular de forma masiva y mejorar el rendimiento físcico con recuperación energética",
       imageUrl: "/combofuerza1.jpg",
       images: [
         "/combofuerza1.jpg",
@@ -984,7 +984,7 @@ export const products: Product[] = [
     {
   detail: "combo-recuperacion-ena",
   name: "Combo Recuperación - ENA",
-  description: "Este combo está diseñado para facilitar la regeneración de tejidos musculares después del entrenamiento y retrasar la fatiga. Incluye Óxido Nítrico y TrueMade Whey Protein de 2 lb.",
+  description: "Pack ENA pensado para entrenamientos exigentes y la búsqueda de un desarrollo muscular de tonalidad rocosa, una recuperación paulatina y vascularidad muscular acompañada de explosión",
   imageUrl: "/comboavanzado1.jpg",
   images: [
     "/comboavanzado1.jpg"
@@ -1013,7 +1013,7 @@ export const products: Product[] = [
 {
   detail: "combo-rendimiento-total",
   name: "Combo Rendimiento Total",
-  description: "Un combo diseñado para maximizar el rendimiento deportivo, optimizar la recuperación y mejorar la composición corporal. Incluye TrueMade Whey Protein, Hydroxy Max Night, Creatina Micronizada y Re-Load.",
+  description: "Un combo diseñado para maximizar el rendimiento deportivo, optimizar la recuperación, mejorar la composición corporal manteniendo bajo el procentaje de grasa corporal aumentando la masa muscular y mejorando la recuperación",
   imageUrl: "/combograsacorporal1.jpg",
   images: [
     "/combograsacorporal1.jpg",

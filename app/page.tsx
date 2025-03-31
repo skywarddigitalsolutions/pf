@@ -7,7 +7,6 @@ import { InfoSection } from "./components/info"
 import { Footer } from "./components/footer"
 import { ProductosDestacados } from "./components/productos-destacados"
 import { CombosSection } from "./components/combos"
-import { CalculadoraSection } from "./components/calculadora"
 import { Contacto } from "./components/contacto"
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <ProductosDestacados />
       <InfoSection />
       <CombosSection/>
-      <CalculadoraSection />
       <Contacto />
       <Footer />
     </div>
