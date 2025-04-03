@@ -3,39 +3,22 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-
-const products = [
-  {
-    name: "Whey Protein",
-    description: "Recuperación muscular de primera. Ideal para aumentar la masa muscular y acelerar la recuperación después del entrenamiento.",
-    image: "/proteina1.jpg",
-  },
-  {
-    name: "Pre-entreno",
-    description: "Energía explosiva para tus sesiones. Mejora tu rendimiento y concentración durante los entrenamientos intensos.",
-    image: "/prewar1.webp",
-  },
-  {
-    name: "BCAA",
-    description: "Aminoácidos esenciales para reducir la fatiga muscular y promover una recuperación más rápida.",
-    image: "/bcca1.webp",
-  },
-  {
-    name: "Creatina",
-    description: "Potencia tu fuerza y rendimiento. Ayuda a mejorar la explosividad y resistencia en entrenamientos de alta intensidad.",
-    image: "/creatinemicronized1.webp",
-  },
-];
+import { products } from "@/app/data/products"
+import Link from "next/link"
 
 export function ProductosDestacados() {
+  // Seleccionar solo 4 productos para mostrar como destacados
+  // Puedes ajustar esta lógica según tus necesidades (por ejemplo, agregar una propiedad "destacado" en products.ts)
+  const productosDestacados = products.slice(0, 4)
+
   return (
     <section className="py-20 bg-grisoscuro">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-rojoprincipal">Productos Destacados</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product, index) => (
+          {productosDestacados.map((product, index) => (
             <motion.div
-              key={product.name}
+              key={product.detail}
               className="relative group"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -45,7 +28,7 @@ export function ProductosDestacados() {
               <div className="relative bg-negro p-6 rounded-lg shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300">
                 <div className="mb-4 overflow-hidden rounded-lg">
                   <Image
-                    src={product.image}
+                    src={product.imageUrl || "/placeholder.svg"}
                     alt={product.name}
                     width={300}
                     height={300}
@@ -53,10 +36,17 @@ export function ProductosDestacados() {
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-blanco">{product.name}</h3>
-                <p className="text-blanco/80 mb-4">{product.description}</p>
-                <button className="text-rojoprincipal hover:text-rojosecundario transition-colors duration-300 flex items-center">
+                <p className="text-blanco/80 mb-4">
+                  {product.description.length > 70
+                    ? `${product.description.substring(0, 70)}...`
+                    : product.description}
+                </p>
+                <Link
+                  href={`/productos/${product.detail}`}
+                  className="text-rojoprincipal hover:text-rojosecundario transition-colors duration-300 flex items-center"
+                >
                   Ver detalles <ArrowRight className="ml-2" size={16} />
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}

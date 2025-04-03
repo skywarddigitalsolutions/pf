@@ -17,9 +17,9 @@ export const products: Product[] = [
     detail: "dhea-man",
     name: "Dhea Man Suplemento",
     description: "Suplemento hormonal que ayuda a equilibrar los niveles de DHEA en el organismo.",
-    imageUrl: "/dheaman1.jpg",
+    imageUrl: "/dheaman1.webp",
     images: [
-      "/dheaman1.jpg",
+      "/dheaman1.webp",
     ],
     category: "Salud",
     objective: ["Equilibrio hormonal", "Vitalidad"],
@@ -104,9 +104,9 @@ export const products: Product[] = [
     detail: "flexo-drink",
     name: "Flexo Drink 400g",
     description: "Suplemento para la salud articular con colágeno hidrolizado y ácido hialurónico.",
-    imageUrl: "/flexo1.png",
+    imageUrl: "/flexo1.webp",
     images: [
-      "/flexo1.png", 
+      "/flexo1.webp", 
       "/flexo2.webp", 
     ],
     category: "Salud",
@@ -678,9 +678,9 @@ export const products: Product[] = [
       detail: "no-gold",
       name: "N.O. Gold",
       description: "Suplemento para aumentar la producción de óxido nítrico, mejorando el flujo sanguíneo y el rendimiento físico.",
-      imageUrl: "/nogold1.jpg",
+      imageUrl: "/nogold1.webp",
       images:[
-        "/nogold1.jpg",
+        "/nogold1.webp",
         "/nogold2.jpg"
       ],
       category: "Vitaminas y Minerales",
@@ -895,9 +895,9 @@ export const products: Product[] = [
       detail: "combo-whey-creatina-preworkout-ena",
       name: "Combo Fuerza y Resistencia",
       description: "Combinación ideal para aumentar drasticamente la fuerza sostenida y la energía en los entrenamientos desarrollando masa muscular de tonalidad rocosa",
-      imageUrl: "/combofuerzaresistencia1.jpg",
+      imageUrl: "/combofuerzaresistencia1.webp",
       images: [
-        "/combofuerzaresistencia1.jpg"
+        "/combofuerzaresistencia1.webp"
       ],
       category: "Combos",
       objective: ["Fuerza", "Resistencia", "Recuperación muscular"],
@@ -927,9 +927,9 @@ export const products: Product[] = [
       detail: "combo-whey-creatina-ena",
       name: "Combo Muscular y Cognitivo",
       description: "Este pack brinda un incremento mejorado de masa muscular apoyado en una gran recuperación rápida y sólida. Gran soporte energético y cognitivo ideal para vida diaria",
-      imageUrl: "/combomuscularycognitivo1.jpg",
+      imageUrl: "/combomuscularycognitivo1.webp",
       images: [
-        "/combomuscularycognitivo1.jpg"
+        "/combomuscularycognitivo1.webp"
       ],
       category: "Combos",
       objective: ["Masa muscular", "Rendimiento cognitivo"],
@@ -956,9 +956,9 @@ export const products: Product[] = [
       detail: "combo-ultra-mass-creatina-ena",
       name: "Combo Masa Muscular",
       description: "Este combo está diseñado para quienes buscan icrementar su masa muscular de forma masiva y mejorar el rendimiento físcico con recuperación energética",
-      imageUrl: "/combofuerza1.jpg",
+      imageUrl: "/combofuerza1.webp",
       images: [
-        "/combofuerza1.jpg",
+        "/combofuerza1.webp",
       ],
       category: "Combos",
       objective: ["Aumento masa muscular", "Recuperación muscular"],
@@ -985,9 +985,9 @@ export const products: Product[] = [
   detail: "combo-recuperacion-ena",
   name: "Combo Recuperación - ENA",
   description: "Pack ENA pensado para entrenamientos exigentes y la búsqueda de un desarrollo muscular de tonalidad rocosa, una recuperación paulatina y vascularidad muscular acompañada de explosión",
-  imageUrl: "/comboavanzado1.jpg",
+  imageUrl: "/comboavanzado1.webp",
   images: [
-    "/comboavanzado1.jpg"
+    "/comboavanzado1.webp"
   ],
   category: "Combos",
   objective: ["Recuperación muscular", "Regeneración de tejidos"],
@@ -1014,9 +1014,9 @@ export const products: Product[] = [
   detail: "combo-rendimiento-total",
   name: "Combo Rendimiento Total",
   description: "Un combo diseñado para maximizar el rendimiento deportivo, optimizar la recuperación, mejorar la composición corporal manteniendo bajo el procentaje de grasa corporal aumentando la masa muscular y mejorando la recuperación",
-  imageUrl: "/combograsacorporal1.jpg",
+  imageUrl: "/combograsacorporal1.webp",
   images: [
-    "/combograsacorporal1.jpg",
+    "/combograsacorporal1.webp",
   ],
   category: "Combos",
   objective: ["Aumento de energía", "Reducción de grasa corporal"],
