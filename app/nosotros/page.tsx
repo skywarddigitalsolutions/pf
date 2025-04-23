@@ -1,12 +1,20 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { Navbar } from "@/app/components/navbar"
-import { Footer } from "@/app/components/footer"
-import { Button } from "@/app/components/button"
-import { ArrowRight, Users, Award, Clock, MapPin, Mail, Phone } from "lucide-react"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Navbar } from "@/app/components/navbar";
+import { Footer } from "@/app/components/footer";
+import { Button } from "@/app/components/button";
+import {
+  ArrowRight,
+  Users,
+  Award,
+  Clock,
+  MapPin,
+  Mail,
+  Phone,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Nosotros() {
   return (
@@ -32,7 +40,9 @@ export default function Nosotros() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-3xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-rojoprincipal">Sobre Nosotros</h1>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-rojoprincipal">
+                Sobre Nosotros
+              </h1>
               <p className="text-xl md:text-2xl text-blanco/80 mb-8">
                 Comprometidos con tu rendimiento y bienestar desde 2010
               </p>
@@ -52,7 +62,7 @@ export default function Nosotros() {
         </section>
 
         {/* Nuestra Historia */}
-        <section className="py-16 bg-grisoscuro/50">
+        <section className="py-16 px-5 bg-grisoscuro/50">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -61,30 +71,48 @@ export default function Nosotros() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-rojoprincipal">Nuestra Historia</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-rojoprincipal">
+                  Nuestra Historia
+                </h2>
                 <p className="text-blanco/80 mb-4">
-                  Toribio nació en 2010 con una misión clara: proporcionar suplementación deportiva y nutricional de la más alta
-                  calidad a precios accesibles. Lo que comenzó como una pequeña tienda local se ha convertido en un
-                  referente nacional en nutrición deportiva.
+                  Toribio nació en 2010 con una misión clara: proporcionar
+                  suplementación deportiva y nutricional de la más alta calidad
+                  a precios accesibles. Lo que comenzó como una pequeña tienda
+                  local se ha convertido en un referente nacional en nutrición
+                  deportiva.
                 </p>
                 <p className="text-blanco/80 mb-6">
-                  Fundada por un grupo de apasionados del fitness y la nutrición, nuestra empresa ha crecido gracias a
-                  nuestro compromiso con la calidad, la transparencia y el servicio al cliente. Hoy, seguimos fieles a
-                  nuestros valores originales mientras expandimos nuestra oferta para satisfacer las necesidades de
-                  todos los deportistas.
+                  Fundada por un grupo de apasionados del fitness y la
+                  nutrición, nuestra empresa ha crecido gracias a nuestro
+                  compromiso con la calidad, la transparencia y el servicio al
+                  cliente. Hoy, seguimos fieles a nuestros valores originales
+                  mientras expandimos nuestra oferta para satisfacer las
+                  necesidades de todos los deportistas.
                 </p>
                 <div className="flex space-x-6">
                   <div>
-                    <div className="text-3xl font-bold text-rojoprincipal">10+</div>
-                    <div className="text-sm text-blanco/60">Años de experiencia</div>
+                    <div className="text-3xl font-bold text-rojoprincipal flex gap-1">
+                      +<p className="text-white">10</p>
+                    </div>
+                    <div className="text-sm text-blanco/60">
+                      Años de experiencia
+                    </div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-rojoprincipal">5000+</div>
-                    <div className="text-sm text-blanco/60">Clientes satisfechos</div>
+                    <div className="text-3xl font-bold text-rojoprincipal flex gap-1">
+                      + <p className="text-white">5000</p>
+                    </div>
+                    <div className="text-sm text-blanco/60">
+                      Clientes satisfechos
+                    </div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-rojoprincipal">100+</div>
-                    <div className="text-sm text-blanco/60">Productos premium</div>
+                    <div className="text-3xl font-bold text-rojoprincipal flex gap-1">
+                      + <p className="text-white">100</p>
+                    </div>
+                    <div className="text-sm text-blanco/60">
+                      Productos premium
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -97,10 +125,10 @@ export default function Nosotros() {
                 className="relative h-[400px] rounded-xl overflow-hidden shadow-xl"
               >
                 <Image
-                  src="/comboavanzado1.webp"
+                  src="/combofuerza1.webp"
                   alt="Nuestra Historia"
                   fill
-                  className="object-cover"
+                  className="object-fill"
                 />
               </motion.div>
             </div>
@@ -117,10 +145,13 @@ export default function Nosotros() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-3xl mx-auto mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-rojoprincipal">Nuestro Equipo</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-rojoprincipal">
+                Nuestro Equipo
+              </h2>
               <p className="text-blanco/80">
-                Contamos con un equipo de profesionales apasionados por el deporte y la nutrición, comprometidos con
-                ayudarte a alcanzar tus objetivos.
+                Contamos con un equipo de profesionales apasionados por el
+                deporte y la nutrición, comprometidos con ayudarte a alcanzar
+                tus objetivos.
               </p>
             </motion.div>
 
@@ -138,7 +169,8 @@ export default function Nosotros() {
                 },
                 {
                   name: "Franco Salas",
-                  position: "Especialista en Suplementación y preparador físico IPEF",
+                  position:
+                    "Especialista en Suplementación y preparador físico IPEF",
                   image: "/placeholder.svg?height=400&width=400&text=Miguel",
                 },
                 {
@@ -156,10 +188,17 @@ export default function Nosotros() {
                   className="bg-grisoscuro rounded-xl overflow-hidden shadow-lg"
                 >
                   <div className="relative h-64">
-                    <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                    <Image
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="p-6 text-center">
-                    <h3 className="text-xl font-bold text-rojoprincipal mb-1">{member.name}</h3>
+                    <h3 className="text-xl font-bold text-rojoprincipal mb-1">
+                      {member.name}
+                    </h3>
                     <p className="text-blanco/70">{member.position}</p>
                   </div>
                 </motion.div>
@@ -169,7 +208,7 @@ export default function Nosotros() {
         </section>
 
         {/* Nuestros Valores */}
-        <section className="py-16 bg-grisoscuro/50">
+        <section className="py-16 px-5 bg-grisoscuro/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -178,10 +217,13 @@ export default function Nosotros() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-3xl mx-auto mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-rojoprincipal">Nuestros Valores</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-rojoprincipal">
+                Nuestros Valores
+              </h2>
               <p className="text-blanco/80">
-                En SupleDeportes nos guiamos por principios fundamentales que definen nuestra forma de trabajar y
-                relacionarnos con nuestros clientes.
+                En Toribio Profit nos guiamos por principios fundamentales que
+                definen nuestra forma de trabajar y relacionarnos con nuestros
+                clientes.
               </p>
             </motion.div>
 
@@ -217,8 +259,12 @@ export default function Nosotros() {
                   <div className="bg-rojoprincipal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                     <value.icon className="h-8 w-8 text-rojoprincipal" />
                   </div>
-                  <h3 className="text-xl font-bold text-rojoprincipal mb-4 text-center">{value.title}</h3>
-                  <p className="text-blanco/80 text-center">{value.description}</p>
+                  <h3 className="text-xl font-bold text-rojoprincipal mb-4 text-center">
+                    {value.title}
+                  </h3>
+                  <p className="text-blanco/80 text-center">
+                    {value.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -229,7 +275,7 @@ export default function Nosotros() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="bg-grisoscuro rounded-2xl overflow-hidden shadow-xl">
-              <div className="grid md:grid-cols-2">
+              <div className="flex justify-center items-center text-center">
                 <div className="p-8 md:p-12">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -237,34 +283,39 @@ export default function Nosotros() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                   >
-                    <h2 className="text-3xl font-bold mb-6 text-rojoprincipal">¿Tienes Preguntas?</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-rojoprincipal">
+                      ¿Tenes alguna duda?
+                    </h2>
                     <p className="text-blanco/80 mb-8">
-                      Estamos aquí para ayudarte. No dudes en contactarnos para resolver cualquier duda sobre nuestros
-                      productos o servicios.
+                      Estamos aca para ayudarte. No dudes en contactarnos para
+                      resolver cualquier duda sobre nuestros productos o
+                      servicios.
                     </p>
 
                     <div className="space-y-6">
-                      <div className="flex items-start">
-                        <MapPin className="h-6 w-6 text-rojoprincipal mr-4 mt-1" />
-                        <div>
+                      <div className="flex flex-col items-center">
+                        <MapPin className="h-6 w-6 text-rojoprincipal mt-1" />
                           <h3 className="font-semibold mb-1">Dirección</h3>
+                        <div>
                           <p className="text-blanco/70">CABA</p>
                         </div>
                       </div>
 
-                      <div className="flex items-start">
-                        <Mail className="h-6 w-6 text-rojoprincipal mr-4 mt-1" />
+                      <div className="flex flex-col items-center">
+                        <Mail className="h-6 w-6 text-rojoprincipal mt-1" />
+                        <h3 className="font-semibold mb-1">Email</h3>
                         <div>
-                          <h3 className="font-semibold mb-1">Email</h3>
-                          <p className="text-blanco/70">info@supledeportes.com</p>
+                          <p className="text-blanco/70">
+                            toribio.profit@gmail.com
+                          </p>
                         </div>
                       </div>
 
-                      <div className="flex items-start">
-                        <Phone className="h-6 w-6 text-rojoprincipal mr-4 mt-1" />
-                        <div>
+                      <div className="flex flex-col items-center">
+                        <Phone className="h-6 w-6 text-rojoprincipal mt-1" />
                           <h3 className="font-semibold mb-1">Teléfono</h3>
-                          <p className="text-blanco/70">(123) 456-7890</p>
+                        <div>
+                          <p className="text-blanco/70">+54 9 11 41468109</p>
                         </div>
                       </div>
                     </div>
@@ -272,20 +323,12 @@ export default function Nosotros() {
                     <div className="mt-8">
                       <Link href="/contacto">
                         <Button className="bg-rojoprincipal hover:bg-rojosecundario text-blanco">
-                          Contactar Ahora <ArrowRight className="ml-2 h-4 w-4" />
+                          Contactar Ahora{" "}
+                          <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
                     </div>
                   </motion.div>
-                </div>
-
-                <div className="relative h-[300px] md:h-auto">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800&text=Mapa+o+Imagen+de+Contacto"
-                    alt="Contacto"
-                    fill
-                    className="object-cover"
-                  />
                 </div>
               </div>
             </div>
@@ -303,11 +346,11 @@ export default function Nosotros() {
               className="text-center max-w-3xl mx-auto"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-rojoprincipal">
-                Únete a la Familia SupleDeportes
+                Unite a la Familia Toribio Profit
               </h2>
               <p className="text-blanco/80 mb-8">
-                Descubre nuestra amplia gama de productos diseñados para ayudarte a alcanzar tus objetivos deportivos y
-                de bienestar.
+                Descubri nuestra amplia gama de productos diseñados para
+                ayudarte a alcanzar tus objetivos deportivos y de bienestar.
               </p>
               <Link href="/productos">
                 <Button className="bg-rojoprincipal hover:bg-rojosecundario text-blanco px-8 py-6 text-lg">
@@ -320,6 +363,5 @@ export default function Nosotros() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
-

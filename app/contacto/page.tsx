@@ -10,7 +10,7 @@ import { Footer } from "@/app/components/footer"
 import { Button } from "@/app/components/button"
 import { Input } from "@/app/components/input"
 import { Textarea } from "@/app/components/textarea"
-import { MapPin, Mail, Phone, Clock, Send, Instagram, Facebook, Twitter, Linkedin } from "lucide-react"
+import { MapPin, Mail, Phone, Clock, Send, Instagram, Facebook } from "lucide-react"
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -86,9 +86,9 @@ export default function ContactoPage() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-3xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-rojoprincipal">Contáctanos</h1>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-rojoprincipal">Contactanos</h1>
               <p className="text-xl md:text-2xl text-blanco/80 mb-8">
-                Estamos aquí para responder tus preguntas y ayudarte con todo lo que necesites
+                Estamos aca para responder tus preguntas y ayudarte con todo lo que necesites
               </p>
             </motion.div>
           </div>
@@ -226,7 +226,7 @@ export default function ContactoPage() {
                 className="space-y-8"
               >
                 <div>
-                  <h2 className="text-2xl font-bold mb-6 text-rojoprincipal">Información de Contacto</h2>
+                  <h2 className="text-2xl font-bold mt-8 mb-6 text-rojoprincipal">Información de Contacto</h2>
                   <p className="text-blanco/80 mb-8">
                     No dudes en contactarnos directamente. Nuestro equipo está listo para ayudarte con cualquier
                     consulta.
@@ -239,7 +239,7 @@ export default function ContactoPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Dirección</h3>
-                        <p className="text-blanco/70">Calle Ejemplo 123, Ciudad, País</p>
+                        <p className="text-blanco/70">CABA</p>
                       </div>
                     </div>
 
@@ -249,7 +249,7 @@ export default function ContactoPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <p className="text-blanco/70">info@supledeportes.com</p>
+                        <p className="text-blanco/70">toribio.profit@gmail.com</p>
                       </div>
                     </div>
 
@@ -259,7 +259,7 @@ export default function ContactoPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Teléfono</h3>
-                        <p className="text-blanco/70">(123) 456-7890</p>
+                        <p className="text-blanco/70">+54 9 11 41468109</p>
                       </div>
                     </div>
 
@@ -269,18 +269,19 @@ export default function ContactoPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Horario de Atención</h3>
-                        <p className="text-blanco/70">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-                        <p className="text-blanco/70">Sábados: 10:00 AM - 2:00 PM</p>
+                        <p className="text-blanco/70">Lunes a Viernes: 9:00hs - 18:00hs</p>
+                        <p className="text-blanco/70">Sábados: 10:00hs - 14:00hs</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold mb-4 text-rojoprincipal">Síguenos en Redes Sociales</h3>
+                  <h3 className="text-xl font-bold mb-4 text-rojoprincipal">Seguínos en nuestras redes sociales</h3>
                   <div className="flex space-x-4">
                     <a
-                      href="#"
+                      href="https://www.instagram.com/toribio.profit?igsh=NDVkc3RjOHBlOHRt"
+                      target="_blank"
                       className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
                     >
                       <Instagram className="h-6 w-6 text-rojoprincipal" />
@@ -291,28 +292,7 @@ export default function ContactoPage() {
                     >
                       <Facebook className="h-6 w-6 text-rojoprincipal" />
                     </a>
-                    <a
-                      href="#"
-                      className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
-                    >
-                      <Twitter className="h-6 w-6 text-rojoprincipal" />
-                    </a>
-                    <a
-                      href="#"
-                      className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
-                    >
-                      <Linkedin className="h-6 w-6 text-rojoprincipal" />
-                    </a>
                   </div>
-                </div>
-
-                <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl mt-8">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800&text=Mapa+de+Ubicación"
-                    alt="Mapa de Ubicación"
-                    fill
-                    className="object-cover"
-                  />
                 </div>
               </motion.div>
             </div>
@@ -331,7 +311,7 @@ export default function ContactoPage() {
             >
               <h2 className="text-3xl font-bold mb-6 text-rojoprincipal">Preguntas Frecuentes</h2>
               <p className="text-blanco/80">
-                Aquí encontrarás respuestas a las preguntas más comunes. Si no encuentras lo que buscas, no dudes en
+                Aca vas a encontrar las respuestas a las preguntas más comunes. Si no encontras lo que buscas, no dudes en
                 contactarnos.
               </p>
             </motion.div>
@@ -356,7 +336,7 @@ export default function ContactoPage() {
                 {
                   question: "¿Tienen tiendas físicas?",
                   answer:
-                    "Sí, contamos con tiendas físicas en las principales ciudades del país. Puedes encontrar la ubicación más cercana en la sección 'Nuestras Tiendas' de nuestra web.",
+                    "No, no contamos con tiendas físicas. Somos una empresa dedicada a la venta de suplementación deportiva online.",
                 },
               ].map((faq, index) => (
                 <motion.div

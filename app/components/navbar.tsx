@@ -21,6 +21,7 @@ const navItems = [
       { name: "Salud", href: "/productos?categoria=Salud" },
       { name: "Ganadores de masa", href: "/productos?categoria=Ganadores%20de%20masa" },
       { name: "Combos", href: "/productos?categoria=Combos" },
+      { name: "Todos los productos", href: "/productos" },
     ],
   },
   { name: "Nosotros", href: "/nosotros" },

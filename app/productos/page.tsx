@@ -183,7 +183,7 @@ function ProductosContent() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {filteredProducts.map((product, index) => (
+          { filteredProducts.map((product, index) => (
             <motion.div
               key={product.detail}
               className="bg-negro/50 backdrop-blur-md rounded-xl overflow-hidden shadow-lg"
@@ -197,7 +197,8 @@ function ProductosContent() {
                   alt={product.name}
                   layout="fill"
                   objectFit="contain"
-                  className="transition-transform duration-300 ease-in-out transform hover:scale-110"
+                  className="hover:cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110 pointer-events-auto"
+                  onClick={() => router.push(`/productos/${product.detail}`)}
                 />
               </div>
               <div className="p-6">
