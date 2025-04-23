@@ -21,7 +21,7 @@ export function InfoSection() {
             >
               <h3 className="text-xl font-bold mb-2">¿No sabes qué suplemento elegir?</h3>
               <p className="mb-4">Te asesoramos según tus objetivos y te recomendamos el mejor plan de suplementación acompañado de una recomendación de ejercicios para potenciar el suplemento</p>
-              <Link href="www.whatsapp.com/1111111">
+              <Link href="https://wa.me/1141468109?text=Hola,%20necesito%20asesoramiento%20sobre..." target="_blank" rel="noopener">
                 <Button
                   variant="outline"
                   className="text-rojoprincipal border-rojoprincipal hover:bg-rojoprincipal hover:text-blanco"

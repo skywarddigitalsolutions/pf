@@ -97,7 +97,7 @@ export default function Nosotros() {
                 className="relative h-[400px] rounded-xl overflow-hidden shadow-xl"
               >
                 <Image
-                  src="/placeholder.svg?height=800&width=600&text=Nuestra+Historia"
+                  src="/comboavanzado1.webp"
                   alt="Nuestra Historia"
                   fill
                   className="object-cover"

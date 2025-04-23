@@ -1,11 +1,12 @@
 import Link from "next/link"
+import { Instagram, Facebook, Twitter, Linkedin, Phone } from "lucide-react"
 
 export function Footer() {
   return (
     <footer className="bg-grisoscuro text-blanco p-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4 text-rojoprincipal">Toribio</h3>
+          <h3 className="text-xl font-bold mb-4 text-rojoprincipal">Toribio Profit</h3>
           <p>Tu tienda de confianza para suplementos deportivos de alta calidad.</p>
         </div>
         <div>
@@ -34,15 +35,31 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="text-lg font-semibold mb-4 text-rojosecundario">Contacto</h4>
-          <p>Calle Ejemplo, 123</p>
-          <p>Ciudad, País</p>
-          <p>Teléfono: (123) 456-7890</p>
-          <p>Email: info@toribio.com</p>
-        </div>
+                  <h3 className="text-xl font-semibold mb-4 text-rojosecundario">Síguenos en Redes Sociales</h3>
+                  <div className="flex space-x-4">
+                  <a
+                      href="#"
+                      className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
+                    >
+                      <Phone className="h-6 w-6 text-rojosecundario" />
+                    </a>
+                    <a
+                      href="#"
+                      className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
+                    >
+                      <Instagram className="h-6 w-6 text-rojosecundario" />
+                    </a>
+                    <a
+                      href="#"
+                      className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
+                    >
+                      <Facebook className="h-6 w-6 text-rojosecundario" />
+                    </a>
+                  </div>
+                </div>
       </div>
       <div className="mt-8 text-center text-sm">
-        <p>&copy; 2025. Hecho por Skyward Digital Solutions. Todos los derechos reservados.</p>
+        <p>&copy; 2025. Hecho por <a className="text-rojoprincipal" href="https://www.sds.com.ar" rel="noopener" target="_blank">Skyward Digital Solutions</a>. Todos los derechos reservados.</p>
       </div>
     </footer>
   )

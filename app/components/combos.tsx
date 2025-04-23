@@ -21,7 +21,7 @@ export function CombosSection() {
           {combos.map((combo) => (
             <motion.div
               key={combo.detail}
-              className="relative h-80 cursor-pointer overflow-hidden rounded-lg"
+              className="relative h-80 cursor-pointer overflow-hidden rounded-lg border-b-rojosecundario border-b-2"
               whileHover={{ scale: 1.05 }}
               onHoverStart={() => setHoveredCombo(combo.detail)}
               onHoverEnd={() => setHoveredCombo(null)}
