@@ -4,8 +4,7 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
 export function WhatsAppButton() {
-  const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-  const url = `https://api.whatsapp.com/send?phone=${phone}`;
+  const url = `https://wa.me/+5491141468109?text=Hola,%20necesito%20asesoramiento%20sobre...`;
 
   return (
     <Link
