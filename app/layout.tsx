@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata : Metadata = {
+  metadataBase: new URL("https://toribioprofit.com"),
   title: "Toribio Profit | Suplementos Deportivos para mejorar tu rendimiento y recuperación",
   description:
     "Descubre nuestra selección de suplementos deportivos: proteínas, creatina, aminoácidos y más. Aumenta tu fuerza, resistencia y recuperación con productos de alta calidad.",
@@ -24,10 +25,10 @@ export const metadata : Metadata = {
     title: "Suplementos Deportivos | Mejora tu Rendimiento y Recuperación",
     description:
       "Explora nuestra variedad de suplementos para potenciar tu entrenamiento. Encuentra proteínas, creatina y más para alcanzar tus objetivos fitness.",
-    url: "URL_DEL_SITIO_WEB",
+    url: "https://toribioprofit.com", // también poné la real acá
     images: [
       {
-        url: "logo.svg",
+        url: "/logo.svg", // como usás metadataBase, esto se resuelve como absoluto
         width: 1200,
         height: 630,
         alt: "Suplementos Deportivos",

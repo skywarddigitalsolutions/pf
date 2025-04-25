@@ -1,67 +1,26 @@
-"use client"
+"use client";
 
-import type React from "react"
-
-import { useState } from "react"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { Navbar } from "@/app/components/navbar"
-import { Footer } from "@/app/components/footer"
-import { Button } from "@/app/components/button"
-import { Input } from "@/app/components/input"
-import { Textarea } from "@/app/components/textarea"
-import { MapPin, Mail, Phone, Clock, Send, Instagram, Facebook } from "lucide-react"
+import type React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Navbar } from "@/app/components/navbar";
+import { Footer } from "@/app/components/footer";
+import { Button } from "@/app/components/button";
+import { Input } from "@/app/components/input";
+import { Textarea } from "@/app/components/textarea";
+import {
+  MapPin,
+  Mail,
+  Phone,
+  Clock,
+  Send,
+  Instagram,
+  Facebook,
+} from "lucide-react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactoPage() {
-  const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    asunto: "",
-    mensaje: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null)
-  const [errorMessage, setErrorMessage] = useState("")
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitSuccess(null)
-    setErrorMessage("")
-
-    // Validación básica
-    if (!formData.nombre || !formData.email || !formData.mensaje) {
-      setErrorMessage("Por favor completa todos los campos requeridos.")
-      setIsSubmitting(false)
-      return
-    }
-
-    // Simulación de envío de formulario
-    try {
-      // Aquí iría la lógica real de envío del formulario
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      setSubmitSuccess(true)
-      setFormData({
-        nombre: "",
-        email: "",
-        asunto: "",
-        mensaje: "",
-      })
-    } catch {
-      setSubmitSuccess(false)
-      setErrorMessage("Hubo un error al enviar el formulario. Por favor intenta nuevamente.")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  const [state, handleSubmit] = useForm("mjkwkywy");
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-grisoscuro to-negro text-blanco">
@@ -86,9 +45,12 @@ export default function ContactoPage() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-3xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-rojoprincipal">Contactanos</h1>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-rojoprincipal">
+                Contactanos
+              </h1>
               <p className="text-xl md:text-2xl text-blanco/80 mb-8">
-                Estamos aca para responder tus preguntas y ayudarte con todo lo que necesites
+                Estamos aca para responder tus preguntas y ayudarte con todo lo
+                que necesites
               </p>
             </motion.div>
           </div>
@@ -105,87 +67,117 @@ export default function ContactoPage() {
                 transition={{ duration: 0.8 }}
                 className="bg-grisoscuro rounded-2xl p-8 shadow-xl"
               >
-                <h2 className="text-2xl font-bold mb-6 text-rojoprincipal">Envíanos un mensaje</h2>
+                <h2 className="text-2xl font-bold mb-6 text-rojoprincipal">
+                  Envíanos un mensaje
+                </h2>
 
-                {submitSuccess === true && (
+                {state.succeeded && (
                   <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400">
                     ¡Mensaje enviado con éxito! Te contactaremos pronto.
                   </div>
                 )}
 
-                {submitSuccess === false && (
+                {state.errors && Object.keys(state.errors).length > 0 && (
                   <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg text-red-400">
-                    {errorMessage || "Hubo un error al enviar el mensaje. Por favor intenta nuevamente."}
+                    Hubo un error al enviar el mensaje. Por favor intenta
+                    nuevamente.
                   </div>
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="nombre" className="block text-sm font-medium mb-2">
-                      Nombre completo <span className="text-rojoprincipal">*</span>
+                    <label
+                      htmlFor="nombre"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Nombre completo{" "}
+                      <span className="text-rojoprincipal">*</span>
                     </label>
                     <Input
                       id="nombre"
                       name="nombre"
-                      value={formData.nombre}
-                      onChange={handleChange}
+                      type="text"
                       placeholder="Tu nombre"
                       className="bg-negro/50 border-grisoscuro focus:border-rojoprincipal text-blanco"
                       required
                     />
+                    <ValidationError
+                      prefix="Nombre"
+                      field="nombre"
+                      errors={state.errors}
+                    />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Email <span className="text-rojoprincipal">*</span>
                     </label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       placeholder="tu@email.com"
                       className="bg-negro/50 border-grisoscuro focus:border-rojoprincipal text-blanco"
                       required
                     />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                    />
                   </div>
 
                   <div>
-                    <label htmlFor="asunto" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="asunto"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Asunto
                     </label>
                     <Input
                       id="asunto"
                       name="asunto"
-                      value={formData.asunto}
-                      onChange={handleChange}
+                      type="text"
                       placeholder="¿Sobre qué nos quieres contactar?"
                       className="bg-negro/50 border-grisoscuro focus:border-rojoprincipal text-blanco"
+                    />
+                    <ValidationError
+                      prefix="Asunto"
+                      field="asunto"
+                      errors={state.errors}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="mensaje" className="block text-sm font-medium mb-2">
+                    <label
+                      htmlFor="mensaje"
+                      className="block text-sm font-medium mb-2"
+                    >
                       Mensaje <span className="text-rojoprincipal">*</span>
                     </label>
                     <Textarea
                       id="mensaje"
-                      name="mensaje"
-                      value={formData.mensaje}
-                      onChange={handleChange}
+                      name="message"
                       placeholder="Escribe tu mensaje aquí..."
                       className="bg-negro/50 border-grisoscuro focus:border-rojoprincipal text-blanco min-h-[150px]"
                       required
+                    />
+                    <ValidationError
+                      prefix="Mensaje"
+                      field="message"
+                      errors={state.errors}
                     />
                   </div>
 
                   <Button
                     type="submit"
                     className="w-full bg-rojoprincipal hover:bg-rojosecundario text-blanco py-6"
-                    disabled={isSubmitting}
+                    disabled={state.submitting}
                   >
-                    {isSubmitting ? (
+                    {state.submitting ? (
                       <span className="flex items-center">
                         <svg
                           className="animate-spin -ml-1 mr-3 h-5 w-5 text-blanco"
@@ -219,6 +211,7 @@ export default function ContactoPage() {
               </motion.div>
 
               {/* Información de Contacto */}
+              {/* Información de Contacto */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -226,10 +219,12 @@ export default function ContactoPage() {
                 className="space-y-8"
               >
                 <div>
-                  <h2 className="text-2xl font-bold mt-8 mb-6 text-rojoprincipal">Información de Contacto</h2>
+                  <h2 className="text-2xl font-bold mt-8 mb-6 text-rojoprincipal">
+                    Información de Contacto
+                  </h2>
                   <p className="text-blanco/80 mb-8">
-                    No dudes en contactarnos directamente. Nuestro equipo está listo para ayudarte con cualquier
-                    consulta.
+                    No dudes en contactarnos directamente. Nuestro equipo está
+                    listo para ayudarte con cualquier consulta.
                   </p>
 
                   <div className="space-y-6">
@@ -249,7 +244,9 @@ export default function ContactoPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <p className="text-blanco/70">toribio.profit@gmail.com</p>
+                        <p className="text-blanco/70">
+                          toribio.profit@gmail.com
+                        </p>
                       </div>
                     </div>
 
@@ -268,16 +265,24 @@ export default function ContactoPage() {
                         <Clock className="h-6 w-6 text-rojoprincipal" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">Horario de Atención</h3>
-                        <p className="text-blanco/70">Lunes a Viernes: 9:00hs - 18:00hs</p>
-                        <p className="text-blanco/70">Sábados: 10:00hs - 14:00hs</p>
+                        <h3 className="font-semibold mb-1">
+                          Horario de Atención
+                        </h3>
+                        <p className="text-blanco/70">
+                          Lunes a Viernes: 9:00hs - 18:00hs
+                        </p>
+                        <p className="text-blanco/70">
+                          Sábados: 10:00hs - 14:00hs
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold mb-4 text-rojoprincipal">Seguínos en nuestras redes sociales</h3>
+                  <h3 className="text-xl font-bold mb-4 text-rojoprincipal">
+                    Seguínos en nuestras redes sociales
+                  </h3>
                   <div className="flex space-x-4">
                     <a
                       href="https://www.instagram.com/toribio.profit?igsh=NDVkc3RjOHBlOHRt"
@@ -287,7 +292,8 @@ export default function ContactoPage() {
                       <Instagram className="h-6 w-6 text-rojoprincipal" />
                     </a>
                     <a
-                      href="#"
+                      href="https://www.facebook.com/profile.php?id=61575876922064&locale=es_LA"
+                      target="_blank"
                       className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
                     >
                       <Facebook className="h-6 w-6 text-rojoprincipal" />
@@ -298,7 +304,6 @@ export default function ContactoPage() {
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-16 bg-grisoscuro/30">
           <div className="container mx-auto px-4">
@@ -309,10 +314,12 @@ export default function ContactoPage() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-3xl mx-auto mb-12"
             >
-              <h2 className="text-3xl font-bold mb-6 text-rojoprincipal">Preguntas Frecuentes</h2>
+              <h2 className="text-3xl font-bold mb-6 text-rojoprincipal">
+                Preguntas Frecuentes
+              </h2>
               <p className="text-blanco/80">
-                Aca vas a encontrar las respuestas a las preguntas más comunes. Si no encontras lo que buscas, no dudes en
-                contactarnos.
+                Aca vas a encontrar las respuestas a las preguntas más comunes.
+                Si no encontras lo que buscas, no dudes en contactarnos.
               </p>
             </motion.div>
 
@@ -326,7 +333,7 @@ export default function ContactoPage() {
                 {
                   question: "¿Ofrecen asesoramiento sobre suplementación?",
                   answer:
-                    "Sí, contamos con especialistas en nutrición deportiva que pueden asesorarte sobre los mejores suplementos para tus objetivos específicos. Contacta con nosotros para agendar una consulta.",
+                    "Sí, contamos con especialistas en nutrición deportiva que pueden asesorarte sin costo sobre los mejores suplementos para tus objetivos específicos. Contacta con nosotros para agendar una consulta.",
                 },
                 {
                   question: "¿Cuál es la política de devoluciones?",
@@ -347,7 +354,9 @@ export default function ContactoPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-negro p-6 rounded-xl shadow-lg"
                 >
-                  <h3 className="text-lg font-bold text-rojoprincipal mb-3">{faq.question}</h3>
+                  <h3 className="text-lg font-bold text-rojoprincipal mb-3">
+                    {faq.question}
+                  </h3>
                   <p className="text-blanco/80">{faq.answer}</p>
                 </motion.div>
               ))}
@@ -357,6 +366,5 @@ export default function ContactoPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
-

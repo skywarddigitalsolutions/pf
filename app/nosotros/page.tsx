@@ -24,12 +24,6 @@ export default function Nosotros() {
         {/* Hero Section */}
         <section className="relative py-20 md:py-32 overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-20">
-            <Image
-              src="/placeholder.svg?height=1080&width=1920&text=Imagen+de+Fondo"
-              alt="Fondo"
-              fill
-              className="object-cover"
-            />
             <div className="absolute inset-0 bg-gradient-to-b from-negro via-transparent to-negro"></div>
           </div>
 
@@ -125,10 +119,10 @@ export default function Nosotros() {
                 className="relative h-[400px] rounded-xl overflow-hidden shadow-xl"
               >
                 <Image
-                  src="/combofuerza1.webp"
+                  src="/Nuestrahistoria.webp"
                   alt="Nuestra Historia"
                   fill
-                  className="object-fill"
+                  className="object-cover"
                 />
               </motion.div>
             </div>
@@ -159,24 +153,20 @@ export default function Nosotros() {
               {[
                 {
                   name: "Cristian López",
-                  position: "Personal Trainer IFBB",
-                  image: "/placeholder.svg?height=400&width=400&text=Carlos",
+                  position: "Personal Trainer IFBB y atencion al cliente",
                 },
                 {
                   name: "Laura Martínez",
                   position: "Nutricionista Deportiva",
-                  image: "/placeholder.svg?height=400&width=400&text=Laura",
                 },
                 {
                   name: "Franco Salas",
                   position:
                     "Especialista en Suplementación y preparador físico IPEF",
-                  image: "/placeholder.svg?height=400&width=400&text=Miguel",
                 },
                 {
-                  name: "Ana García",
-                  position: "Atención al Cliente",
-                  image: "/placeholder.svg?height=400&width=400&text=Ana",
+                  name: "Martin Perez",
+                  position: "Profesor nacional de educacion fisica,rutinas y entrenamientos online",
                 },
               ].map((member, index) => (
                 <motion.div
@@ -187,14 +177,6 @@ export default function Nosotros() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-grisoscuro rounded-xl overflow-hidden shadow-lg"
                 >
-                  <div className="relative h-64">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
                   <div className="p-6 text-center">
                     <h3 className="text-xl font-bold text-rojoprincipal mb-1">
                       {member.name}

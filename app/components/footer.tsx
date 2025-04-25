@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Instagram, Facebook, Twitter, Linkedin, Phone } from "lucide-react"
+import { Instagram, Facebook, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -44,13 +44,15 @@ export function Footer() {
                       <Phone className="h-6 w-6 text-rojosecundario" />
                     </a>
                     <a
-                      href="#"
+                      href="https://www.instagram.com/toribio.profit?igsh=NDVkc3RjOHBlOHRt"
+                      target="_blank"
                       className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
                     >
                       <Instagram className="h-6 w-6 text-rojosecundario" />
                     </a>
                     <a
-                      href="#"
+                      href="https://www.facebook.com/profile.php?id=61575876922064&locale=es_LA"
+                      target="_blank"
                       className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
                     >
                       <Facebook className="h-6 w-6 text-rojosecundario" />

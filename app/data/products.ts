@@ -956,9 +956,9 @@ export const products: Product[] = [
       detail: "combo-ultra-mass-creatina-ena",
       name: "Combo Masa Muscular",
       description: "Este combo está diseñado para quienes buscan icrementar su masa muscular de forma masiva y mejorar el rendimiento físcico con recuperación energética",
-      imageUrl: "/combofuerza1.webp",
+      imageUrl: "/Nuestrahistoria.webp",
       images: [
-        "/combofuerza1.webp",
+        "/Nuestrahistoria.webp",
       ],
       category: "Combos",
       objective: ["Aumento masa muscular", "Recuperación muscular"],
