@@ -138,8 +138,7 @@ export const products: Product[] = [
     imageUrl: "/justwheysinsabor1.webp",
     images: [
       "/justwheysinsabor1.webp", 
-      "/justwheysinsabor2.webp", 
-      "/justwheysinsabor3.webp", 
+      "/justwheysinsabor2.webp",
     ],
     category: "Proteínas",
     objective: ["Recuperación muscular", "Crecimiento muscular"],
