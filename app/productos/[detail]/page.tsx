@@ -115,7 +115,7 @@ export default function ProductDetail() {
             >
               <div className="relative overflow-hidden rounded-xl bg-grisoscuro/50 shadow-xl">
                 <Image
-                  src={selectedImage || "/placeholder.svg"}
+                  src={selectedImage}
                   alt={product.name}
                   width={600}
                   height={600}
@@ -137,7 +137,7 @@ export default function ProductDetail() {
                     onClick={() => setSelectedImage(img)}
                   >
                     <Image
-                      src={img || "/placeholder.svg"}
+                      src={img}
                       alt={`Vista ${index + 1}`}
                       width={80}
                       height={80}
@@ -288,7 +288,7 @@ export default function ProductDetail() {
                     className="bg-grisoscuro/50 rounded-lg p-4 transition-transform hover:scale-105 hover:shadow-lg"
                   >
                     <div className="aspect-square relative mb-2 overflow-hidden rounded-lg">
-                      <Image src={item.imageUrl || "/placeholder.svg"} alt={item.name} fill className="object-cover" />
+                      <Image src={item.imageUrl} alt={item.name} fill className="object-cover" />
                     </div>
                     <h3 className="text-sm font-medium text-blanco truncate">{item.name}</h3>
                   </Link>

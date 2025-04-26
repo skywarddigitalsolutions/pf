@@ -29,12 +29,6 @@ export default function ContactoPage() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-20">
-            <Image
-              src="/placeholder.svg?height=1080&width=1920&text=Imagen+de+Contacto"
-              alt="Fondo"
-              fill
-              className="object-cover"
-            />
             <div className="absolute inset-0 bg-gradient-to-b from-negro via-transparent to-negro"></div>
           </div>
 

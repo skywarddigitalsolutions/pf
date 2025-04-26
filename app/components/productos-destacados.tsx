@@ -24,7 +24,7 @@ export function ProductosDestacados() {
               <div className="relative bg-negro p-6 rounded-lg shadow-lg transform group-hover:-translate-y-2 transition-transform duration-300">
                 <div className="mb-4 overflow-hidden rounded-lg">
                   <Image
-                    src={product.imageUrl || "/placeholder.svg"}
+                    src={product.imageUrl}
                     alt={product.name}
                     width={300}
                     height={300}

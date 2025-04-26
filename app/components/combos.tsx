@@ -28,7 +28,7 @@ export function CombosSection() {
               onClick={() => router.push(`/productos/${combo.detail}`)}
             >
               <Image
-                src={combo.imageUrl || "/placeholder.svg"}
+                src={combo.imageUrl}
                 alt={combo.name}
                 layout="fill"
                 objectFit="cover"
