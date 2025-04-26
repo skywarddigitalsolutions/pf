@@ -2,7 +2,6 @@
 
 import type React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Navbar } from "@/app/components/navbar";
 import { Footer } from "@/app/components/footer";
 import { Button } from "@/app/components/button";
