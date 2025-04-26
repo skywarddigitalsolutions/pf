@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useCallback, Suspense } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
-import { Navbar } from "@/app/components/navbar"
-import { Footer } from "@/app/components/footer"
-import { Button } from "@/app/components/button"
-import { Input } from "@/app/components/input"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { products } from "@/app/data/products"
-import { Check, ChevronDown, X, RefreshCw } from "lucide-react"
+import { useState, useEffect, useCallback, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Navbar } from "@/app/components/navbar";
+import { Footer } from "@/app/components/footer";
+import { Button } from "@/app/components/button";
+import { Input } from "@/app/components/input";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { products } from "@/app/data/products";
+import { Check, ChevronDown, X, RefreshCw } from "lucide-react";
 
 const categories = [
   "Todos",
@@ -22,83 +22,92 @@ const categories = [
   "Salud",
   "Ganadores de masa",
   "Combos",
-]
+];
 
 function ProductosContent() {
-  const [filteredProducts, setFilteredProducts] = useState(products)
-  const [searchTerm, setSearchTerm] = useState("")
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const router = useRouter()
-  const searchParams = useSearchParams()
+  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const filterProducts = useCallback(() => {
-    let filtered = products
+    let filtered = products;
 
     if (searchTerm) {
       filtered = filtered.filter(
         (product) =>
           product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          product.description.toLowerCase().includes(searchTerm.toLowerCase()),
-      )
+          product.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
     }
 
-    if (selectedCategories.length > 0 && !selectedCategories.includes("Todos")) {
+    if (
+      selectedCategories.length > 0 &&
+      !selectedCategories.includes("Todos")
+    ) {
       filtered = filtered.filter((product) =>
-        selectedCategories.some((category) => product.category.includes(category)),
-      )
+        selectedCategories.some((category) =>
+          product.category.includes(category)
+        )
+      );
     }
 
-    setFilteredProducts(filtered)
-  }, [searchTerm, selectedCategories])
+    setFilteredProducts(filtered);
+  }, [searchTerm, selectedCategories]);
 
   useEffect(() => {
-    filterProducts()
-  }, [filterProducts])
+    filterProducts();
+  }, [filterProducts]);
 
   // Modificar para leer múltiples parámetros de categoría
   useEffect(() => {
     // Obtener todos los parámetros de la URL
-    const urlParams = new URLSearchParams(searchParams.toString())
-    const categoryParams = urlParams.getAll("categoria")
+    const urlParams = new URLSearchParams(searchParams.toString());
+    const categoryParams = urlParams.getAll("categoria");
 
     if (categoryParams.length > 0) {
       // Filtrar solo las categorías válidas
-      const validCategories = categoryParams.filter((cat) => categories.includes(cat))
+      const validCategories = categoryParams.filter((cat) =>
+        categories.includes(cat)
+      );
       if (validCategories.length > 0) {
-        setSelectedCategories(validCategories)
+        setSelectedCategories(validCategories);
       }
     } else {
       // Si no hay parámetros de categoría, verificar si hay un solo parámetro
-      const singleCategory = searchParams.get("categoria")
+      const singleCategory = searchParams.get("categoria");
       if (singleCategory && categories.includes(singleCategory)) {
-        setSelectedCategories([singleCategory])
+        setSelectedCategories([singleCategory]);
       }
     }
-  }, [searchParams])
+  }, [searchParams]);
 
   const toggleCategory = (category: string) => {
     if (category === "Todos") {
-      setSelectedCategories([])
-      setIsDropdownOpen(false)
-      return
+      setSelectedCategories([]);
+      setIsDropdownOpen(false);
+      return;
     }
 
     if (selectedCategories.includes(category)) {
-      setSelectedCategories(selectedCategories.filter((c) => c !== category))
+      setSelectedCategories(selectedCategories.filter((c) => c !== category));
     } else {
-      setSelectedCategories([...selectedCategories, category])
+      setSelectedCategories([...selectedCategories, category]);
     }
-  }
+  };
 
   const clearFilters = () => {
-    setSearchTerm("")
-    setSelectedCategories([])
-  }
+    setSearchTerm("");
+    setSelectedCategories([]);
+  };
 
   return (
     <div className="bg-negro">
-      <h1 className="text-4xl font-bold mb-8 text-center text-rojoprincipal">Nuestros Productos</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center text-rojoprincipal">
+        Nuestros Productos
+      </h1>
 
       <div className="mb-8 max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
@@ -129,10 +138,14 @@ function ProductosContent() {
                 {selectedCategories.length === 0
                   ? "Todas las categorías"
                   : selectedCategories.length === 1
-                    ? selectedCategories[0]
-                    : `${selectedCategories.length} categorías seleccionadas`}
+                  ? selectedCategories[0]
+                  : `${selectedCategories.length} categorías seleccionadas`}
               </span>
-              <ChevronDown className={`ml-2 h-4 w-4 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+              <ChevronDown
+                className={`ml-2 h-4 w-4 transition-transform ${
+                  isDropdownOpen ? "rotate-180" : ""
+                }`}
+              />
             </button>
 
             {isDropdownOpen && (
@@ -145,14 +158,18 @@ function ProductosContent() {
                   >
                     <div
                       className={`w-5 h-5 mr-2 flex items-center justify-center rounded border ${
-                        (category === "Todos" && selectedCategories.length === 0) ||
+                        (category === "Todos" &&
+                          selectedCategories.length === 0) ||
                         selectedCategories.includes(category)
                           ? "bg-rojoprincipal border-rojoprincipal"
                           : "border-blanco/30"
                       }`}
                     >
-                      {((category === "Todos" && selectedCategories.length === 0) ||
-                        selectedCategories.includes(category)) && <Check className="h-3 w-3 text-blanco" />}
+                      {((category === "Todos" &&
+                        selectedCategories.length === 0) ||
+                        selectedCategories.includes(category)) && (
+                        <Check className="h-3 w-3 text-blanco" />
+                      )}
                     </div>
                     <span className="text-blanco">{category}</span>
                   </div>
@@ -160,66 +177,87 @@ function ProductosContent() {
               </div>
             )}
             {(searchTerm || selectedCategories.length > 0) && (
-            <motion.button
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="flex text-sm justify-center items-center text-rojoprincipal m-1 hover:text-rojosecundario transition-colors"
-              onClick={clearFilters}
-            >
-              <RefreshCw className="h-3.5 w-3.5 mr-1" />
-              Limpiar filtros
-            </motion.button>
-          )}
+              <motion.button
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex text-sm justify-center items-center text-rojoprincipal m-1 hover:text-rojosecundario transition-colors"
+                onClick={clearFilters}
+              >
+                <RefreshCw className="h-3.5 w-3.5 mr-1" />
+                Limpiar filtros
+              </motion.button>
+            )}
           </div>
         </div>
       </div>
 
       {filteredProducts.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-xl text-blanco/80">No se encontraron productos que coincidan con tu búsqueda.</p>
-          <Button className="mt-4 bg-rojoprincipal hover:bg-rojosecundario text-blanco" onClick={clearFilters}>
+          <p className="text-xl text-blanco/80">
+            No se encontraron productos que coincidan con tu búsqueda.
+          </p>
+          <Button
+            className="mt-4 bg-rojoprincipal hover:bg-rojosecundario text-blanco"
+            onClick={clearFilters}
+          >
             Mostrar todos los productos
           </Button>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          { filteredProducts.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <motion.div
               key={product.detail}
-              className="bg-negro/50 backdrop-blur-md rounded-xl overflow-hidden shadow-lg"
+              className="hover:cursor-pointer bg-negro/50 backdrop-blur-md rounded-xl overflow-hidden shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              onClick={() => router.push(`/productos/${product.detail}`)}
             >
               <div className="relative h-80">
                 <Image
-                  src={product.imageUrl || "/placeholder.svg"}
+                  src={product.imageUrl}
                   alt={product.name}
                   layout="fill"
                   objectFit="contain"
                   className="hover:cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110 pointer-events-auto"
-                  onClick={() => router.push(`/productos/${product.detail}`)}
+                  onClick={e => {
+                    e.stopPropagation();
+                    router.push(`/productos/${product.detail}`);
+                  }}
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-rojoprincipal">{product.name}</h3>
+                <h3 className="text-xl font-bold mb-2 text-rojoprincipal">
+                  {product.name}
+                </h3>
                 <p className="text-sm mb-4 text-blanco/80">
                   {" "}
-                  {product.description.length > 80 ? `${product.description.slice(0, 80)}...` : product.description}
+                  {product.description.length > 80
+                    ? `${product.description.slice(0, 80)}...`
+                    : product.description}
                 </p>
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-sm font-semibold text-rojosecundario">Objetivos:</span>
+                  <span className="text-sm font-semibold text-rojosecundario">
+                    Objetivos:
+                  </span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {product.objective.map((obj) => (
-                    <span key={obj} className="text-xs bg-rojoprincipal/20 text-rojoprincipal px-2 py-1 rounded-full">
+                  {product.objective.map(obj => (
+                    <span
+                      key={obj}
+                      className="text-xs bg-rojoprincipal/20 text-rojoprincipal px-2 py-1 rounded-full"
+                    >
                       {obj}
                     </span>
                   ))}
                 </div>
-                <Button
-                  className="w-full bg-rojoprincipal hover:bg-rojosecundario text-blanco transition-colors duration-300"
-                  onClick={() => router.push(`/productos/${product.detail}`)}
+                <Button 
+                  className="w-full bg-rojoprincipal text-blanco p-0"
+                  onClick={e => {
+                    e.stopPropagation();
+                    router.push(`/productos/${product.detail}`);
+                  }}
                 >
                   Ver detalles
                 </Button>
@@ -229,7 +267,7 @@ function ProductosContent() {
         </div>
       )}
     </div>
-  )
+  );
 }
 
 export default function Productos() {
@@ -237,12 +275,13 @@ export default function Productos() {
     <div className="flex flex-col min-h-screen bg-negro text-blanco">
       <Navbar />
       <main className="flex-grow pt-20 px-4 pb-12">
-        <Suspense fallback={<div className="text-center py-12">Cargando productos...</div>}>
+        <Suspense
+          fallback={ <div className="text-center py-12">Cargando productos...</div> }
+        >
           <ProductosContent />
         </Suspense>
       </main>
       <Footer />
     </div>
-  )
+  );
 }
-

@@ -11,12 +11,12 @@ import { Textarea } from "@/app/components/textarea";
 import {
   MapPin,
   Mail,
-  Phone,
   Clock,
   Send,
   Instagram,
   Facebook,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactoPage() {
@@ -252,10 +252,10 @@ export default function ContactoPage() {
 
                     <div className="flex items-start">
                       <div className="bg-rojoprincipal/10 p-3 rounded-full mr-4">
-                        <Phone className="h-6 w-6 text-rojoprincipal" />
+                        <FaWhatsapp className="h-6 w-6 text-rojoprincipal" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">Teléfono</h3>
+                        <h3 className="font-semibold mb-1">Whatsapp</h3>
                         <p className="text-blanco/70">+54 9 11 41468109</p>
                       </div>
                     </div>

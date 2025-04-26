@@ -9,51 +9,20 @@ import Link from "next/link";
 
 export function Hero() {
   const [text, setText] = useState("");
-  const [shapes, setShapes] = useState<
-    {
-      width: string;
-      height: string;
-      left: string;
-      top: string;
-      x: number;
-      y: number;
-      duration: number;
-    }[]
-  >([]);
   const fullText = "Potencia tu rendimiento";
 
   useEffect(() => {
-    const generated = Array.from({ length: 8 }, () => ({
-      width: `${Math.random() * 600 + 200}px`,
-      height: `${Math.random() * 600 + 200}px`,
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 200 - 50}%`,
-      x: Math.random() * 100 - 50,
-      y: Math.random() * 100 - 50,
-      duration: Math.random() * 10 + 10,
-    }));
-    setShapes(generated);
-  }, []);
-
-  useEffect(() => {
     let idx = 0;
-  
+
     const tick = () => {
       idx++;
       if (idx <= fullText.length) {
         setText(fullText.slice(0, idx));
-        setTimeout(tick, 100);
+        setTimeout(tick, 40);
       }
     };
-  
-    // Arrancamos inmediatamente
     tick();
-  
-    // No hay nada que limpiar salvo timeouts,
-    // pero como cada timeout sólo se programa si idx≤length,
-    // al acabar no queda ninguno pendiente.
   }, []);
-
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -73,29 +42,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-      >
-        {shapes.map((shape, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full mix-blend-multiply filter blur-xl opacity-70"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(211,47,47,0.8) 0%, rgba(168,72,73,0.3) 70%)",
-              width: shape.width,
-              height: shape.height,
-              left: shape.left,
-              top: shape.top,
-            }}
-            animate={{ x: shape.x, y: shape.y, scale: [1, 1.1, 1] }}
-            transition={{
-              duration: shape.duration,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          />
-        ))}
-      </motion.div>
-
+      ></motion.div>
       {/* Contenido estático + texto */}
       <div className="relative z-10 text-center px-4">
         <motion.h1

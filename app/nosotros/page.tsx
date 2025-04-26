@@ -1,22 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Navbar } from "@/app/components/navbar";
 import { Footer } from "@/app/components/footer";
 import { Button } from "@/app/components/button";
-import {
-  ArrowRight,
-  Users,
-  Award,
-  Clock,
-  MapPin,
-  Mail,
-  Phone,
-} from "lucide-react";
+import { ArrowRight, Users, Award, Clock, MapPin, Mail } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Nosotros() {
+  const router = useRouter();
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-grisoscuro to-negro text-blanco">
       <Navbar />
@@ -41,12 +36,15 @@ export default function Nosotros() {
                 Comprometidos con tu rendimiento y bienestar desde 2010
               </p>
               <div className="flex justify-center space-x-4">
-                <Button className="bg-rojoprincipal hover:bg-rojosecundario text-blanco">
-                  Contactar <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <a href="https://wa.me/+5491141468109?text=Hola,%20necesito%20asesoramiento%20sobre..." target="_blank">
+                  <Button className="bg-rojoprincipal hover:bg-rojosecundario text-blanco">
+                    Contactar
+                  </Button>
+                </a>
                 <Button
                   variant="outline"
                   className="border-rojoprincipal text-rojoprincipal hover:bg-rojoprincipal hover:text-blanco"
+                  onClick={() => router.push(`/productos`)}
                 >
                   Nuestros Productos
                 </Button>
@@ -166,7 +164,8 @@ export default function Nosotros() {
                 },
                 {
                   name: "Martin Perez",
-                  position: "Profesor nacional de educacion fisica,rutinas y entrenamientos online",
+                  position:
+                    "Profesor nacional de educacion fisica,rutinas y entrenamientos online",
                 },
               ].map((member, index) => (
                 <motion.div
@@ -277,7 +276,7 @@ export default function Nosotros() {
                     <div className="space-y-6">
                       <div className="flex flex-col items-center">
                         <MapPin className="h-6 w-6 text-rojoprincipal mt-1" />
-                          <h3 className="font-semibold mb-1">Dirección</h3>
+                        <h3 className="font-semibold mb-1">Dirección</h3>
                         <div>
                           <p className="text-blanco/70">CABA</p>
                         </div>
@@ -294,8 +293,8 @@ export default function Nosotros() {
                       </div>
 
                       <div className="flex flex-col items-center">
-                        <Phone className="h-6 w-6 text-rojoprincipal mt-1" />
-                          <h3 className="font-semibold mb-1">Teléfono</h3>
+                        <FaWhatsapp className="h-6 w-6 text-rojoprincipal mt-1" />
+                        <h3 className="font-semibold mb-1">Whatsapp</h3>
                         <div>
                           <p className="text-blanco/70">+54 9 11 41468109</p>
                         </div>

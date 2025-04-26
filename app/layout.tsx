@@ -25,10 +25,10 @@ export const metadata : Metadata = {
     title: "Suplementos Deportivos | Mejora tu Rendimiento y Recuperación",
     description:
       "Explora nuestra variedad de suplementos para potenciar tu entrenamiento. Encuentra proteínas, creatina y más para alcanzar tus objetivos fitness.",
-    url: "https://toribioprofit.com", // también poné la real acá
+    url: "https://toribioprofit.com",
     images: [
       {
-        url: "/logo.svg", // como usás metadataBase, esto se resuelve como absoluto
+        url: "/logo.svg",
         width: 1200,
         height: 630,
         alt: "Suplementos Deportivos",
@@ -46,6 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
          <link rel="icon" href="/logo.svg" />
+         <link rel="preload" as="image" href="/fondo.webp" type="fondo.webp" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

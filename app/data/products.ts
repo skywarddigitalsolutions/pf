@@ -680,7 +680,7 @@ export const products: Product[] = [
       imageUrl: "/nogold1.webp",
       images:[
         "/nogold1.webp",
-        "/nogold2.jpg"
+        "/nogold2.webp"
       ],
       category: "Vitaminas y Minerales",
       objective: ["Rendimiento físico", "Energía"],
@@ -955,9 +955,9 @@ export const products: Product[] = [
       detail: "combo-ultra-mass-creatina-ena",
       name: "Combo Masa Muscular",
       description: "Este combo está diseñado para quienes buscan icrementar su masa muscular de forma masiva y mejorar el rendimiento físcico con recuperación energética",
-      imageUrl: "/Nuestrahistoria.webp",
+      imageUrl: "/combofuerza1.webp",
       images: [
-        "/Nuestrahistoria.webp",
+        "/combofuerza1.webp",
       ],
       category: "Combos",
       objective: ["Aumento masa muscular", "Recuperación muscular"],

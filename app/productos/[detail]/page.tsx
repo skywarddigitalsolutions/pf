@@ -27,10 +27,7 @@ export default function ProductDetail() {
     if (foundProduct) {
       setProduct(foundProduct)
       setSelectedImage(foundProduct.imageUrl)
-
-  
-
-      setTimeout(() => setIsLoading(false), 500) // Simular carga
+      setTimeout(() => setIsLoading(false), 500)
     } else {
       router.push("/productos")
     }
@@ -42,14 +39,14 @@ export default function ProductDetail() {
     const message = encodeURIComponent(
       `Hola, estoy interesado en comprar ${product.name}. ¿Podrían darme más información?`,
     )
-    window.open(`https://wa.me/1234567890?text=${message}`, "_blank")
+    window.open(`https://wa.me/+5491141468109?text=${message}`, "_blank")
   }
 
   if (isLoading) {
     return (
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-grisoscuro to-negro text-blanco">
         <Navbar />
-        <div className="flex-grow flex items-center justify-center">
+        <div className="flex-grow flex items-center justify-center min-h-screen">
           <div className="animate-pulse flex flex-col items-center">
             <div className="h-32 w-32 bg-rojoprincipal/20 rounded-full flex items-center justify-center">
               <ShoppingCart className="h-16 w-16 text-rojoprincipal/40" />

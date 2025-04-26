@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Instagram, Facebook, Phone } from "lucide-react"
+import { Instagram, Facebook } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -38,10 +39,10 @@ export function Footer() {
                   <h3 className="text-xl font-semibold mb-4 text-rojosecundario">Síguenos en Redes Sociales</h3>
                   <div className="flex space-x-4">
                   <a
-                      href="#"
+                      href="https://wa.me/+5491141468109?text=Hola,%20necesito%20asesoramiento%20sobre..."
                       className="bg-grisoscuro hover:bg-rojoprincipal/20 p-3 rounded-full transition-colors duration-300"
                     >
-                      <Phone className="h-6 w-6 text-rojosecundario" />
+                      <FaWhatsapp className="h-6 w-6 text-rojosecundario" />
                     </a>
                     <a
                       href="https://www.instagram.com/toribio.profit?igsh=NDVkc3RjOHBlOHRt"

@@ -6,17 +6,13 @@ import { ArrowRight } from "lucide-react"
 import { products } from "@/app/data/products"
 import Link from "next/link"
 
-export function ProductosDestacados() {
-  // Seleccionar solo 4 productos para mostrar como destacados
-  // Puedes ajustar esta lógica según tus necesidades (por ejemplo, agregar una propiedad "destacado" en products.ts)
-  const productosDestacados = products.slice(0, 4)
-
+export function ProductosDestacados() { 
   return (
     <section className="py-20 bg-grisoscuro">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-rojoprincipal">Productos Destacados</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {productosDestacados.map((product, index) => (
+          {products.slice(0, 4).map((product, index) => (
             <motion.div
               key={product.detail}
               className="relative group"
