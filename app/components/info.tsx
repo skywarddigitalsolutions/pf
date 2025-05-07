@@ -57,10 +57,10 @@ export function InfoSection() {
             <div className="flex items-start mb-4">
               <Star className="text-rojoprincipal mr-2 shrink-0" />
               <p className="italic">
-                {"Gracias al asesoramiento de Toribio, logré definir mi cuerpo y mejorar mi resistencia."}
+                {"Gracias al asesoramiento del equipo de Toribio, logré la definicion muscular que necesitaba pre competencia ,ademas de mejorar mi rendimiento."}
               </p>
             </div>
-            <p className="text-right">- Lucas S., Entrenador Personal</p>
+            <p className="text-right">- Lucas S., Entrenador Personal 45 años</p>
           </BentoItem>
 
           {/* Guía rápida sobre suplementos */}
@@ -69,10 +69,10 @@ export function InfoSection() {
             <div className="flex items-start mb-4">
               <Star className="text-rojoprincipal mr-2 shrink-0" />
               <p className="italic">
-                {"Gracias al asesoramiento de Toribio, logré definir mi cuerpo y mejorar mi resistencia."}
+                {"El asesoramiento de Toribio hizo la diferencia,me ayudaron a elegir la suplementacion que mejor se ajustaba a mi disciplina deportiva y me ayudaron con el entrenamiento."}
               </p>
             </div>
-            <p className="text-right">- Lucas S., Entrenador Personal</p>
+            <p className="text-right">- Mariano G, Skater 50 años</p>
           </BentoItem>
 
           <BentoItem gradient="secondary" className="md:col-span-1">

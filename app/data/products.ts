@@ -14,44 +14,6 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    detail: "dhea-man",
-    name: "Dhea Man Suplemento",
-    description: "Suplemento hormonal que ayuda a equilibrar los niveles de DHEA en el organismo.",
-    imageUrl: "/dheaman1.webp",
-    images: [
-      "/dheaman1.webp",
-    ],
-    category: "Salud",
-    objective: ["Equilibrio hormonal", "Vitalidad"],
-    
-    details: [
-      "Ayuda a mantener el equilibrio hormonal",
-      "Favorece la producción natural de testosterona",
-      "Aporta energía y vitalidad",
-      "Contribuye a la salud ósea y muscular",
-      "Mejora el bienestar general",
-    ],
-    modoDeUso: [
-      "Tomar 1 cápsula al día con agua.",
-      "Preferentemente por la mañana con el desayuno.",
-      "Para mejores resultados, mantener un uso constante durante al menos 3 meses.",
-      "No exceder la dosis recomendada.",
-    ],
-    beneficios: [
-      "Equilibra los niveles hormonales naturalmente.",
-      "Aumenta la energía y vitalidad diaria.",
-      "Mejora el rendimiento físico y mental.",
-      "Contribuye a la salud ósea y muscular.",
-      "Favorece el bienestar general del organismo.",
-    ],
-    ingredientes: [
-      "DHEA (Dehidroepiandrosterona) 50mg",
-      "Excipientes: Celulosa microcristalina",
-      "Estearato de magnesio vegetal",
-      "Cápsula vegetal (HPMC)",
-    ],
-  },
-  {
     detail: "mtor-bcaa-270g",
     name: "BCCA 270g",
     description: "Suplemento dietario en polvo para preparar bebida a base de aminoácidos, ideal para apoyar la recuperación y el crecimiento muscular.",
